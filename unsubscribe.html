@@ -1,0 +1,93 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Descadastrar e-mail — Boletim Agro Sul</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background:#F8F6F1;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      height:100vh;
+      font-family:'Montserrat',sans-serif;
+      color:#1E3A29;
+      margin:0;
+    }
+    .card {
+      background:#fff;
+      padding:40px 50px;
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+      text-align:center;
+      max-width:420px;
+      width:100%;
+    }
+    h1 { font-size:1.6rem; margin-bottom:12px; }
+    p { color:#555; margin-bottom:20px; line-height:1.5; }
+    form { display:flex; flex-direction:column; gap:12px; }
+    input[type="email"] {
+      padding:10px 14px;
+      border:1px solid #ccc;
+      border-radius:8px;
+      font-size:1rem;
+      width:100%;
+    }
+    button {
+      background:#A22E2E;
+      color:#fff;
+      border:none;
+      padding:10px 16px;
+      border-radius:8px;
+      font-weight:600;
+      cursor:pointer;
+      transition:background .2s;
+    }
+    button:hover {
+      background:#8B2525;
+    }
+    .success {
+      display:none;
+      color:#1E3A29;
+      font-weight:600;
+      margin-top:10px;
+    }
+    a.cta {
+      color:#1E3A29;
+      font-weight:600;
+      text-decoration:none;
+      display:inline-block;
+      margin-top:16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="assets/logo.png" alt="Boletim Agro Sul" style="width:160px;margin-bottom:20px;">
+    <h1>Remover assinatura</h1>
+    <p>Sentiremos sua falta 😢<br>Insira abaixo o e-mail que deseja descadastrar do Boletim Agro Sul.</p>
+
+    <form action="https://formspree.io/f/mblpbyjp" method="POST" id="unsubscribe-form">
+      <input type="hidden" name="_subject" value="Solicitação de descadastro - Boletim Agro Sul">
+      <input type="hidden" name="_next" value="https://amezzomo.github.io/boletim_agro_sul/unsubscribe.html?success=true">
+      <input type="email" name="email" placeholder="Seu e-mail" required>
+      <button type="submit">Descadastrar</button>
+      <div class="success" id="success-msg">✅ Solicitação enviada! Em breve seu e-mail será removido.</div>
+    </form>
+
+    <a href="index.html" class="cta">← Voltar ao site</a>
+  </div>
+
+  <script>
+    const form = document.getElementById('unsubscribe-form');
+    const successMsg = document.getElementById('success-msg');
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('success')) {
+      successMsg.style.display = 'block';
+    }
+  </script>
+</body>
+</html>
