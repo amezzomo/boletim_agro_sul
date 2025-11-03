@@ -1,19 +1,17 @@
+Boletim Agro Sul — Visual v2 (alinhado ao logo enviado)
 
-Boletim Agro Sul - Projeto de Site (Template)
-============================================
+Conteúdo:
+- index.html (novo visual)
+- css/styles.css (nova paleta alinhada ao logo)
+- js/charts.js (config Chart.js)
+- assets/logo.png (logo fornecido)
+- assets/favicon-32.png, assets/og-boletim-semana44.png
+- .nojekyll, .github/workflows/deploy-pages.yml
 
-Conteúdo pronto para upload em um repositório GitHub / Netlify / GitHub Pages.
+Instruções de uso:
+1. Faça backup do repositório atual.
+2. Crie branch 'ui-refresh' no repositório e copie estes arquivos para a raiz.
+3. Commit e push; abra PR para 'main' e revise.
+4. Após merge, o GitHub Pages (ou workflow) publicará a versão atualizada.
 
-Estrutura:
-- index.html           -> página principal (conteúdo editorial + gráficos)
-- assets/logo.svg      -> logo oficial (SVG)
-- css/styles.css       -> variáveis de cor e estilos base
-- js/charts.js         -> inicialização de gráficos (usa Chart.js CDN)
-- sample_data.json     -> exemplo de dados usado no boletim
-
-Como usar:
-1) Faça upload desta pasta para um repositório GitHub.
-2) Habilite GitHub Pages (Settings -> Pages) apontando para branch main (root).
-3) Se quiser deploy automático, mantenha a branch 'main' e o workflow em .github/workflows.
-
-Licença: Arquivo de exemplo; use conforme desejar. 
+Formulário de assinatura: remova ou substitua o placeholder no index.html (Formspree ID).
