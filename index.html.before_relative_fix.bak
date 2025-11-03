@@ -78,7 +78,7 @@
         #soja-25-26-avanco { 
             position: relative; 
             overflow: hidden; 
-            background-image: url('assets/lavoura-soja-bg.jpg'); 
+            background-image: url('/assets/lavoura-soja-bg.jpg'); 
             background-size: cover; 
             background-position: center; 
             color: #0b2b40;
