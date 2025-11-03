@@ -1,0 +1,133 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Boletim Agro Sul - Edição Semana 44 (02/11/2025)</title>
+  <meta name="description" content="Resumo semanal de mercado, custos e clima para produtores do Sul do Brasil (RS, SC, PR).">
+  <meta property="og:title" content="Boletim Agro Sul - Semana 44 / 02-11-2025">
+  <meta property="og:description" content="Custos de fertilizantes, defensivos, preços de grãos e recomendações práticas para produtores do Sul.">
+  <meta property="og:image" content="assets/og-boletim-semana44.png">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/charts.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="header" role="banner">
+      <img src="assets/logo.png" alt="Boletim Agro Sul - logo" />
+      <div class="header-title">
+        <h1 class="h1">Boletim Agro Sul</h1>
+        <p class="h2">Edição semanal • Semana 44 — 02 de novembro de 2025</p>
+      </div>
+
+      <!-- ✅ Formulário funcional com Formspree -->
+      <form id="subscribe-form" action="https://formspree.io/f/mblpbyjp" method="POST" style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:center;margin-top:10px;">
+        <input type="email" name="email" placeholder="Seu e-mail" aria-label="Seu e-mail" required 
+               style="padding:8px 12px;border-radius:6px;border:1px solid #ccc;min-width:220px;font-family:'Montserrat',sans-serif;">
+        <input type="hidden" name="_next" value="https://amezzomo.github.io/boletim_agro_sul/obrigado.html">
+        <button id="subscribe-button" class="cta" type="submit" style="background:#1E3A29;color:#fff;border:none;padding:8px 16px;border-radius:6px;font-weight:600;cursor:pointer;">
+          Assine por e-mail
+        </button>
+        <span id="subscribe-status" style="font-size:0.9rem;margin-left:8px;color:#1E3A29;font-weight:500;"></span>
+      </form>
+      <!-- 🔁 Fim do formulário atualizado -->
+    </header>
+
+    <div class="grid">
+      <main class="card analysis-content" role="main">
+        <h2 class="section-title">Resumo Executivo</h2>
+        <p>Esta edição apresenta análise integrada de custos de fertilizantes (N, P, K), defensivos agrícolas e preços de grãos para produtores do Sul do Brasil (RS, SC, PR). Principais pontos:</p>
+        <ul>
+          <li>Fertilizantes: leve alta em N e manutenção em P/K; atenção ao câmbio e logística.</li>
+          <li>Defensivos: leve reajuste (2–5%) em herbicidas e inseticidas; fungicidas com estoques no varejo.</li>
+          <li>Grãos: soja e milho com recuperação, mas margens apertadas frente aos custos.</li>
+        </ul>
+
+        <h2>Custos de Fertilizantes (N, P, K)</h2>
+        <p><strong>Uréia (N):</strong> preço estimado ~R$ 2.300–2.500/t. <strong>MAP (P):</strong> ~R$ 4.000–4.300/t. <strong>KCl (K):</strong> ~R$ 2.900–3.100/t.</p>
+        <div style="height:260px;"><canvas id="fertilizerChart"></canvas></div>
+        <p class="muted">Fonte: Agrinvest, Notícias Agrícolas, consultorias de mercado.</p>
+
+        <h2>Relação de Troca</h2>
+        <p>A relação de troca atual está em aproximadamente <strong>27 sacas de soja por tonelada de NPK</strong>, reduzindo o poder de compra do produtor.</p>
+        <div style="height:200px;"><canvas id="inadimplenciaChart"></canvas></div>
+
+        <h2>Mercado de Grãos (Foco Sul)</h2>
+        <p>Preços médios (referência final Out/25): Soja ~R$148/sc | Milho ~R$61/sc | Trigo ~R$79/sc. Exportações seguem firmes via portos do Sul.</p>
+
+        <h2>Defensivos Agrícolas</h2>
+        <p>Estimativa de custo médio por hectare: Soja ~R$580/ha; Milho ~R$450/ha. Crescimento de área tratada entre 2,5% e 3,5%.</p>
+
+        <h2>Impactos Regionais e Recomendações</h2>
+        <p><strong>RS:</strong> pressão por crédito e atrasos de plantio. <strong>PR:</strong> plantio avançando com atenção ao clima. <strong>SC:</strong> ajuste de áreas entre culturas.</p>
+
+        <h2>Vozes do Mercado</h2>
+        <p><strong>Jeferson Souza (Agrinvest):</strong> foco na gestão de custos e na qualidade dos insumos. <strong>Kellen Severo (Jovem Pan):</strong> atenção ao impacto do câmbio nas margens.</p>
+      </main>
+
+      <aside class="card" role="complementary">
+        <div class="kpi">
+          <div>
+            <p class="section-title">Crise de Crédito (KPIs)</p>
+            <p class="muted">Inadimplência geral (Jul/25)</p>
+            <p class="value kpi-value">5.14%</p>
+          </div>
+        </div>
+
+        <div style="margin-top:18px;">
+          <p class="section-title">Termômetro dos Fertilizantes</p>
+          <table class="table">
+            <thead><tr><th>Produto</th><th>USD/ton (CFR)</th></tr></thead>
+            <tbody>
+              <tr><td>Uréia (N)</td><td>~422</td></tr>
+              <tr><td>MAP (P)</td><td>~718</td></tr>
+              <tr><td>KCl (K)</td><td>~362</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="margin-top:18px;">
+          <p class="section-title">Preços de Soja (Foco Sul)</p>
+          <table class="table">
+            <thead><tr><th>Região</th><th>Porto</th></tr></thead>
+            <tbody>
+              <tr><td>Rio Grande do Sul</td><td>~R$138,50/saca</td></tr>
+              <tr><td>Paraná</td><td>~R$139,50/saca</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="margin-top:18px;">
+          <p class="section-title">Fontes</p>
+          <p class="muted">Agrinvest | Notícias Agrícolas | Kynetec | Jovem Pan | CEPEA | Abifina</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer class="footer" role="contentinfo">
+      <p>Boletim Agro Sul — Edição Semanal • Semana 44 / 02-11-2025</p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/charts.js"></script>
+
+  <!-- 🔁 Script de feedback do formulário -->
+  <script>
+    const form = document.getElementById('subscribe-form');
+    const button = document.getElementById('subscribe-button');
+    const status = document.getElementById('subscribe-status');
+    form.addEventListener('submit', function(event) {
+      status.textContent = 'Enviando...';
+      button.disabled = true;
+      setTimeout(() => {
+        status.textContent = '✅ Enviado com sucesso!';
+        button.disabled = false;
+      }, 1500);
+    });
+  </script>
+</body>
+</html>
