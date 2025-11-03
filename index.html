@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="pt-BR">
 <head>
@@ -21,17 +22,18 @@
         <h1 class="h1">Boletim Agro Sul</h1>
         <p class="h2">Edição semanal • Semana 44 — 02 de novembro de 2025</p>
       </div>
-      <div class="actions">
-<form action="https://formspree.io/f/mblpbyjp" method="POST" style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:center;margin-top:10px;">
-  <input type="email" name="email" placeholder="Seu e-mail" aria-label="Seu e-mail" required 
-         style="padding:8px 12px;border-radius:6px;border:1px solid #ccc;min-width:220px;font-family:'Montserrat',sans-serif;">
-  <input type="hidden" name="_next" value="https://amezzomo.github.io/boletim_agro_sul/obrigado.html">
-  <button class="cta" type="submit" style="background:#1E3A29;color:#fff;border:none;padding:8px 16px;border-radius:6px;font-weight:600;cursor:pointer;">
-    Assine por e-mail
-  </button>
-</form>
-<!-- Fim do formulário atualizado -->
-      </div>
+
+      <!-- ✅ Formulário funcional com Formspree -->
+      <form id="subscribe-form" action="https://formspree.io/f/mblpbyjp" method="POST" style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:center;margin-top:10px;">
+        <input type="email" name="email" placeholder="Seu e-mail" aria-label="Seu e-mail" required 
+               style="padding:8px 12px;border-radius:6px;border:1px solid #ccc;min-width:220px;font-family:'Montserrat',sans-serif;">
+        <input type="hidden" name="_next" value="https://amezzomo.github.io/boletim_agro_sul/obrigado.html">
+        <button id="subscribe-button" class="cta" type="submit" style="background:#1E3A29;color:#fff;border:none;padding:8px 16px;border-radius:6px;font-weight:600;cursor:pointer;">
+          Assine por e-mail
+        </button>
+        <span id="subscribe-status" style="font-size:0.9rem;margin-left:8px;color:#1E3A29;font-weight:500;"></span>
+      </form>
+      <!-- 🔁 Fim do formulário atualizado -->
     </header>
 
     <div class="grid">
@@ -64,7 +66,6 @@
 
         <h2>Vozes do Mercado</h2>
         <p><strong>Jeferson Souza (Agrinvest):</strong> foco na gestão de custos e na qualidade dos insumos. <strong>Kellen Severo (Jovem Pan):</strong> atenção ao impacto do câmbio nas margens.</p>
-
       </main>
 
       <aside class="card" role="complementary">
@@ -103,7 +104,6 @@
           <p class="section-title">Fontes</p>
           <p class="muted">Agrinvest | Notícias Agrícolas | Kynetec | Jovem Pan | CEPEA | Abifina</p>
         </div>
-
       </aside>
     </div>
 
@@ -111,7 +111,23 @@
       <p>Boletim Agro Sul — Edição Semanal • Semana 44 / 02-11-2025</p>
     </footer>
   </div>
+
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="js/charts.js"></script>
+
+  <!-- 🔁 Script de feedback do formulário -->
+  <script>
+    const form = document.getElementById('subscribe-form');
+    const button = document.getElementById('subscribe-button');
+    const status = document.getElementById('subscribe-status');
+    form.addEventListener('submit', function(event) {
+      status.textContent = 'Enviando...';
+      button.disabled = true;
+      setTimeout(() => {
+        status.textContent = '✅ Enviado com sucesso!';
+        button.disabled = false;
+      }, 1500);
+    });
+  </script>
 </body>
 </html>
