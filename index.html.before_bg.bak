@@ -62,30 +62,8 @@
         <p>Estimativa de custo médio por hectare: Soja ~R$580/ha; Milho ~R$450/ha. Crescimento de área tratada entre 2,5% e 3,5%.</p>
 
         
-        
-        <style>
-        /* Soybean block background styles (inserted by assistant) */
-        #soja-25-26-avanco { 
-            position: relative; 
-            overflow: hidden; 
-            background-image: url('assets/lavoura-soja-bg.jpg'); 
-            background-size: cover; 
-            background-position: center; 
-            color: #0b2b40;
-        }
-        #soja-25-26-avanco .overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(255,255,255,0.82);
-            z-index: 0;
-        }
-        #soja-25-26-avanco .content-wrap { position: relative; z-index: 1; }
-        @media (max-width:720px) {
-            #soja-25-26-avanco { background-position: center top; }
-        }
-        </style>
-    <!-- INÍCIO: Bloco — Plantio da Soja 2025/26 -->
-        <section id="soja-25-26-avanco" class="card" style="margin:18px 0;padding:18px;border-radius:10px;background:transparent;box-shadow:0 4px 12px rgba(16,42,67,0.04);"><div class="overlay" aria-hidden="true"></div><div class="content-wrap" style="padding:18px;">
+        <!-- INÍCIO: Bloco — Plantio da Soja 2025/26 -->
+        <section id="soja-25-26-avanco" class="card" style="margin:18px 0;padding:18px;border-radius:10px;background:#fff;box-shadow:0 4px 12px rgba(16,42,67,0.04);">
           <h2 class="section-title">Plantio da Soja — Safra 2025/26 (avançamento por estado)</h2>
           <p class="muted">Resumo do avanço de semeadura da soja para a safra 2025/26 nos estados do Sul. Dados sujeitos a atualização conforme boletins estaduais.</p>
           <div style="overflow:auto;margin-top:8px;">
@@ -114,7 +92,7 @@
             </table>
           </div>
           <p class="muted" style="margin-top:8px;font-size:0.9rem;">Fonte(s): DERAL-PR, EMATER/RS-Ascar, EPAGRI/CEPA, CONAB. Compilado em <strong>02/11/2025</strong>.</p>
-        </div></section>
+        </section>
         <!-- FIM: Bloco — Plantio da Soja 2025/26 -->
 
         <h2>Impactos Regionais e Recomendações</h2>
