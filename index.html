@@ -1,219 +1,39 @@
-
 <!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Boletim Agro Sul - Edição Semana 44 (02/11/2025)</title>
-  <meta name="description" content="Resumo semanal de mercado, custos e clima para produtores do Sul do Brasil (RS, SC, PR).">
-  <meta property="og:title" content="Boletim Agro Sul - Semana 44 / 02-11-2025">
-  <meta property="og:description" content="Custos de fertilizantes, defensivos, preços de grãos e recomendações práticas para produtores do Sul.">
-  <meta property="og:image" content="assets/og-boletim-semana44.png">
-  <link rel="icon" href="assets/favicon-32.png" sizes="32x32">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-  <script defer src="js/charts.js"></script>
-
-<style>
-/* Compact podcast player styling (assistant inserted) */
-#compact-podcast h4 { margin-bottom:4px; }
-#compact-podcast audio { height:36px; max-height:42px; }
-@media (max-width:720px) {
-  #compact-podcast audio { height:44px; }
-}
-</style>
-
+  <title>Boletim Agro Sul - Semana 45/2025</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <header class="header" role="banner">
-      <img src="assets/logo.png" alt="Boletim Agro Sul - logo" />
-      <div class="header-title">
-        <h1 class="h1">Boletim Agro Sul</h1>
-        <p class="h2">Edição semanal • Semana 44 — 02 de novembro de 2025</p>
-      </div>
-
-      <!-- ✅ Formulário funcional com Formspree -->
-      <form id="subscribe-form" action="https://formspree.io/f/mblpbyjp" method="POST" style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:center;margin-top:10px;">
-        <input type="email" name="email" placeholder="Seu e-mail" aria-label="Seu e-mail" required 
-               style="padding:8px 12px;border-radius:6px;border:1px solid #ccc;min-width:220px;font-family:'Montserrat',sans-serif;">
-        <input type="hidden" name="_next" value="https://amezzomo.github.io/boletim_agro_sul/obrigado.html">
-        <button id="subscribe-button" class="cta" type="submit" style="background:#1E3A29;color:#fff;border:none;padding:8px 16px;border-radius:6px;font-weight:600;cursor:pointer;">
-          Assine por e-mail
-        </button>
-        <span id="subscribe-status" style="font-size:0.9rem;margin-left:8px;color:#1E3A29;font-weight:500;"></span>
-      </form>
-      <!-- 🔁 Fim do formulário atualizado -->
-    </header>
-
-    <div class="grid">
-      <main class="card analysis-content" role="main">
-        <h2 class="section-title">Resumo Executivo</h2>
-        <p>Esta edição apresenta análise integrada de custos de fertilizantes (N, P, K), defensivos agrícolas e preços de grãos para produtores do Sul do Brasil (RS, SC, PR). Principais pontos:</p>
-        <ul>
-          <li>Fertilizantes: leve alta em N e manutenção em P/K; atenção ao câmbio e logística.</li>
-          <li>Defensivos: leve reajuste (2–5%) em herbicidas e inseticidas; fungicidas com estoques no varejo.</li>
-          <li>Grãos: soja e milho com recuperação, mas margens apertadas frente aos custos.</li>
-        </ul>
-
-        <h2>Custos de Fertilizantes (N, P, K)</h2>
-        <p><strong>Uréia (N):</strong> preço estimado ~R$ 2.300–2.500/t. <strong>MAP (P):</strong> ~R$ 4.000–4.300/t. <strong>KCl (K):</strong> ~R$ 2.900–3.100/t.</p>
-        <div style="height:260px;"><canvas id="fertilizerChart"></canvas></div>
-        <p class="muted">Fonte: Agrinvest, Notícias Agrícolas, consultorias de mercado.</p>
-
-        <h2>Relação de Troca</h2>
-        <p>A relação de troca atual está em aproximadamente <strong>27 sacas de soja por tonelada de NPK</strong>, reduzindo o poder de compra do produtor.</p>
-        <div style="height:200px;"><canvas id="inadimplenciaChart"></canvas></div>
-
-        <h2>Mercado de Grãos (Foco Sul)</h2>
-        <p>Preços médios (referência final Out/25): Soja ~R$148/sc | Milho ~R$61/sc | Trigo ~R$79/sc. Exportações seguem firmes via portos do Sul.</p>
-
-        <h2>Defensivos Agrícolas</h2>
-        <p>Estimativa de custo médio por hectare: Soja ~R$580/ha; Milho ~R$450/ha. Crescimento de área tratada entre 2,5% e 3,5%.</p>
-
-        
-        
-        <style>
-        /* Soybean block background styles (inserted by assistant) */
-        #soja-25-26-avanco { 
-            position: relative; 
-            overflow: hidden; 
-            background-image: url('assets/lavoura-soja-bg.jpg'); 
-            background-size: cover; 
-            background-position: center; 
-            color: #0b2b40;
-        }
-        #soja-25-26-avanco .overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(255,255,255,0.60);
-            z-index: 0;
-        }
-        #soja-25-26-avanco .content-wrap { position: relative; z-index: 1; }
-        @media (max-width:720px) {
-            #soja-25-26-avanco { background-position: center top; }
-        }
-        </style>
-    <!-- INÍCIO: Bloco — Plantio da Soja 2025/26 -->
-        
-<section id="soja-25-26-avanco"
-  style="margin:18px 0; padding:18px; border-radius:10px; background-image: url('assets/lavoura-soja-bg.jpg') !important; background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important; background-color: transparent !important; position: relative; box-shadow:0 4px 12px rgba(16,42,67,0.04);">
-  <div class="overlay" aria-hidden="true" style="position:absolute;inset:0;background:rgba(255,255,255,0.60);z-index:0;"></div>
-  <div class="content-wrap" style="position:relative;z-index:1;padding:18px;">
-<div class="overlay" aria-hidden="true"></div><div class="content-wrap" style="padding:18px;">
-          <h2 class="section-title">Plantio da Soja — Safra 2025/26 (avançamento por estado)</h2>
-          <p class="muted">Resumo do avanço de semeadura da soja para a safra 2025/26 nos estados do Sul. Dados sujeitos a atualização conforme boletins estaduais.</p>
-          <div style="overflow:auto;margin-top:8px;">
-            <table class="table" style="min-width:720px;">
-              <thead><tr><th>Estado</th><th style="text-align:right;width:140px">% área semeada</th><th>Observação</th><th>Fonte</th></tr></thead>
-              <tbody>
-                <tr>
-                  <td>Paraná (PR)</td>
-                  <td style="text-align:right;"><strong>≈ 52%</strong></td>
-                  <td>DERAL-PR — boletim semana 43/2025 registra ≈52% da área projetada (valores variam por semana).</td>
-                  <td><a href="https://www.agricultura.pr.gov.br/sites/default/arquivos_restritos/files/documento/2025-10/boletim_semana_43_deral.pdf" target="_blank" rel="noopener">Boletim DERAL-PR</a></td>
-                </tr>
-                <tr>
-                  <td>Rio Grande do Sul (RS)</td>
-                  <td style="text-align:right;"><em>Sem dado consolidado</em></td>
-                  <td>Não foi localizado percentual oficial consolidado para semeadura da soja 2025/26 em boletins públicos estaduais até o momento.</td>
-                  <td><a href="https://www.agricultura.rs.gov.br/" target="_blank" rel="noopener">EMATER/RS-Ascar</a></td>
-                </tr>
-                <tr>
-                  <td>Santa Catarina (SC)</td>
-                  <td style="text-align:right;"><em>Sem dado consolidado</em></td>
-                  <td>EPAGRI indica plantio em preparação; não foram encontrados percentuais oficiais de % semeada para 2025/26.</td>
-                  <td><a href="https://www.observatorioagro.sc.gov.br/" target="_blank" rel="noopener">EPAGRI / Observatório Agro SC</a></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="muted" style="margin-top:8px;font-size:0.9rem;">Fonte(s): DERAL-PR, EMATER/RS-Ascar, EPAGRI/CEPA, CONAB. Compilado em <strong>02/11/2025</strong>.</p>
-        </div>  </div>
-</section>
-        <!-- FIM: Bloco — Plantio da Soja 2025/26 -->
-
-        
-
-
-        <h2>Impactos Regionais e Recomendações</h2>
-        <p><strong>RS:</strong> pressão por crédito e atrasos de plantio. <strong>PR:</strong> plantio avançando com atenção ao clima. <strong>SC:</strong> ajuste de áreas entre culturas.</p>
-
-        <h2>Vozes do Mercado</h2>
-        <p><strong>Jeferson Souza (Agrinvest):</strong> foco na gestão de custos e na qualidade dos insumos. <strong>Kellen Severo (Jovem Pan):</strong> atenção ao impacto do câmbio nas margens.</p>
-      </main>
-
-      <aside class="card" role="complementary">
-        
-        <!-- INÍCIO: Compact Player — Podcast (KPI area) -->
-        <div id="compact-podcast" style="margin-bottom:12px;">
-          <h4 style="margin:0 0 6px;font-size:0.95rem;color:#102a43;">Podcast</h4>
-          <audio controls preload="none" style="width:100%;height:36px;display:block;">
-            <source src="assets/podcast_dilema_prosperidade_2025.mp3" type="audio/mpeg">
-            Seu navegador não suporta o elemento de áudio.
-          </audio>
-        </div>
-        <!-- FIM: Compact Player — Podcast (KPI area) -->
-
-        <div class="kpi">
-          <div>
-            <p class="section-title">Crise de Crédito (KPIs)</p>
-            <p class="muted">Inadimplência geral (Jul/25)</p>
-            <p class="value kpi-value">5.14%</p>
-          </div>
-        </div>
-
-        <div style="margin-top:18px;">
-          <p class="section-title">Termômetro dos Fertilizantes</p>
-          <table class="table">
-            <thead><tr><th>Produto</th><th>USD/ton (CFR)</th></tr></thead>
-            <tbody>
-              <tr><td>Uréia (N)</td><td>~422</td></tr>
-              <tr><td>MAP (P)</td><td>~718</td></tr>
-              <tr><td>KCl (K)</td><td>~362</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div style="margin-top:18px;">
-          <p class="section-title">Preços de Soja (Foco Sul)</p>
-          <table class="table">
-            <thead><tr><th>Região</th><th>Porto</th></tr></thead>
-            <tbody>
-              <tr><td>Rio Grande do Sul</td><td>~R$138,50/saca</td></tr>
-              <tr><td>Paraná</td><td>~R$139,50/saca</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div style="margin-top:18px;">
-          <p class="section-title">Fontes</p>
-          <p class="muted">Agrinvest | Notícias Agrícolas | Kynetec | Jovem Pan | CEPEA | Abifina</p>
-        </div>
-      </aside>
-    </div>
-
-    <footer class="footer" role="contentinfo">
-      <p>Boletim Agro Sul — Edição Semanal • Semana 44 / 02-11-2025</p>
+  <header class="site-header">
+    <h1>Resumo Semanal do Agronegócio</h1>
+    <p class="meta">Semana 45 – de 3 a 9 de novembro de 2025</p>
+  </header>
+  <main class="content">
+    <img src="imagens/boletim45.jpg" alt="Capa Boletim" class="cover">
+    <section>
+      <h2>Introdução</h2>
+      <p>A semana foi marcada por ajustes de mercado e atenção redobrada aos custos de produção. No cenário internacional, a expectativa de reabertura do mercado japonês para a carne bovina brasileira ganhou força, enquanto internamente a combinação de juros altos, retração no seguro rural e elevação no custo de fertilizantes trouxe cautela às decisões de investimento dos produtores.</p>
+    </section>
+    <section>
+      <h2>Destaques Nacionais</h2>
+      <ul>
+        <li>Mercado de Carne – Japão pode reabrir as portas ao Brasil</li>
+        <li>Seguro Rural – Menor cobertura em 10 anos</li>
+        <li>Crédito e Financiamento – Juros ainda travam o investimento</li>
+        <li>Insumos e Fertilizantes – Custos sobem com importações recordes</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Mercado Regional</h2>
+      <p>Fertilizantes, Grãos e Crédito: panorama regional e recomendações.</p>
+    </section>
+    <footer class="footer">
+      <p>Fontes: Canal Kellen Severo (YouTube), Reuters, DatamarNews, CNseg, ANDA, Agrolink.</p>
+      <p><a href="Boletim_Agro_Semanal_Semana_45_2025.docx" download>Baixar versão .docx</a></p>
     </footer>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="js/charts.js"></script>
-
-  <!-- 🔁 Script de feedback do formulário -->
-  <script>
-    const form = document.getElementById('subscribe-form');
-    const button = document.getElementById('subscribe-button');
-    const status = document.getElementById('subscribe-status');
-    form.addEventListener('submit', function(event) {
-      status.textContent = 'Enviando...';
-      button.disabled = true;
-      setTimeout(() => {
-        status.textContent = '✅ Enviado com sucesso!';
-        button.disabled = false;
-      }, 1500);
-    });
-  </script>
+  </main>
 </body>
 </html>
