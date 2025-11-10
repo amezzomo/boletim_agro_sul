@@ -1,0 +1,58 @@
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Preview KPIs - Boletim Agro Sul</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+body{font-family:Inter,Arial,Helvetica,sans-serif;background:#f3f4f6;margin:0;padding:0}
+.container{max-width:1100px;margin:0 auto;padding:20px}
+.header{background:#1f2937;color:#fff;padding:18px;border-radius:8px;margin-bottom:16px}
+.main-grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:900px){.main-grid{grid-template-columns:1fr 320px}}
+.card{background:#fff;padding:16px;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.06)}
+.kpi-value{color:#0ea5e9;font-weight:700}
+.kpi-delta.up{color:#ef4444} .kpi-delta.down{color:#10b981} .kpi-delta.stable{color:#f59e0b}
+#kpi-panel{position:relative}
+/* responsive toggle */
+#kpi-toggle{display:none}
+@media(max-width:900px){#kpi-toggle{display:block;position:fixed;right:12px;bottom:12px;background:#0b6b2f;color:#fff;border:none;padding:10px 14px;border-radius:8px;z-index:9999} #kpi-panel{position:fixed;right:0;top:0;height:100vh;width:320px;transform:translateX(100%);transition:transform .28s} #kpi-panel.open{transform:translateX(0)}}
+.chart-container{height:160px}
+.kpi-list .item{margin-bottom:8px}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="container">
+  <header class="header"><h1>Boletim Agro Sul — Preview KPIs</h1><p style="margin:0.2rem 0 0">Semana 45 — 03/11/2025 a 09/11/2025</p></header>
+  <div class="main-grid">
+    <main>
+      <section class="card">
+        <h2>Introdução</h2>
+        <p>A semana foi marcada por ajustes de mercado e atenção redobrada aos custos de produção. No cenário internacional, a expectativa de reabertura do mercado japonês para a carne bovina brasileira ganhou força...</p>
+      </section>
+      <section class="card" style="margin-top:12px">
+        <h2>Podcast</h2>
+        <audio controls src='podcast/Agronegócio 2025_ Crise de Crédito, Custo Alto e o Paradoxo da Safra Recorde.mp3'></audio>
+      </section>
+    </main>
+
+    <aside id="kpi-panel" class="card">
+      <h3 style="margin-top:0">📊 Indicadores da Semana</h3>
+      <div id="kpi-contents" class="kpi-list"></div>
+      <div class="chart-container"><canvas id="kpiFertilizerChart"></canvas></div>
+    </aside>
+  </div>
+</div>
+
+<button id="kpi-toggle" aria-expanded="false">KPIs</button>
+
+<script>
+fetch('kpi.json').then(r=>r.json()).then(data=>{const kpis=data.kpis;const cont=document.getElementById('kpi-contents');Object.keys(kpis).forEach(k=>{const it=kpis[k];const div=document.createElement('div');div.className='item';div.innerHTML='<div style="font-size:13px;color:#6b7280">'+it.label+'</div><div style="font-size:20px"><span class="kpi-value">'+it.value+'</span> <span class="kpi-delta '+(it.trend==='up'?'up':(it.trend==='down'?'down':'stable'))+'">'+(it.trend==='up'?'↑':(it.trend==='down'?'↓':'↔'))+' '+(it.delta||'')+'</span></div>';cont.appendChild(div);}); // chart
+const fert=data.fertilizantes;const labels=Object.keys(fert);const vals=labels.map(l=>fert[l]);new Chart(document.getElementById('kpiFertilizerChart'),{type:'bar',data:{labels:labels,datasets:[{data:vals,backgroundColor:['#47A8F5','#F7C548','#4CAF50']}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{display:false}}}});}).catch(e=>console.error(e));
+// toggle
+const toggle=document.getElementById('kpi-toggle');const panel=document.getElementById('kpi-panel');toggle.addEventListener('click',()=>{panel.classList.toggle('open');toggle.setAttribute('aria-expanded',panel.classList.contains('open'))});
+</script>
+</body>
+</html>
