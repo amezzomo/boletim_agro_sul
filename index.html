@@ -1,78 +1,125 @@
+
 <!doctype html>
-<html lang='pt-BR'>
+<html lang="pt-BR">
 <head>
-  <meta charset='utf-8'>
-  <meta name='viewport' content='width=device-width,initial-scale=1'>
-  <title>Boletim Agro Sul - Semana 45/2025</title>
-  <link rel='stylesheet' href='style.css'>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Boletim Agro Sul - Edição Semana 44 (02/11/2025)</title>
+  <meta name="description" content="Resumo semanal de mercado, custos e clima para produtores do Sul do Brasil (RS, SC, PR).">
+  <meta property="og:title" content="Boletim Agro Sul - Semana 44 / 02-11-2025">
+  <meta property="og:description" content="Custos de fertilizantes, defensivos, preços de grãos e recomendações práticas para produtores do Sul.">
+  <meta property="og:image" content="assets/og-boletim-semana44.png">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/charts.js"></script>
 </head>
 <body>
-  <header class='site-header'>
-    <h1>Resumo Semanal do Agronegócio</h1>
-    <p class='meta'>Semana 45 – de 3 a 9 de novembro de 2025</p>
-  </header>
-  
-<section class='kpis'>
-  <h2>Indicadores da Semana</h2>
-  <ul class='kpi-list'>
-    <li><strong>Dólar (USD/BRL):</strong> R$ 5,33 (07/11/2025)</li><li><strong>Soja (CEPEA, R$/sc):</strong> R$ 138,86 (07/11/2025)</li><li><strong>Milho (futuro B3, R$/sc):</strong> R$ 67,78 (Nov 2025)</li><li><strong>Boi gordo (R$/@):</strong> R$ 322,00 (07/11/2025)</li><li><strong>Selic (%):</strong> 15,00% (Copom, 05/11/2025)</li>
-  </ul>
-</section>
+  <div class="container">
+    <header class="header" role="banner">
+      <img src="assets/logo.png" alt="Boletim Agro Sul - logo" />
+      <div class="header-title">
+        <h1 class="h1">Boletim Agro Sul</h1>
+        <p class="h2">Edição semanal • Semana 44 — 02 de novembro de 2025</p>
+      </div>
 
-  <main class='content'>
-<!doctype html>
-<html lang='pt-BR'>
-<head>
-  <meta charset='utf-8'>
-  <meta name='viewport' content='width=device-width,initial-scale=1'>
-  <title>Boletim Agro Sul - Semana 45/2025</title>
-  <link rel='stylesheet' href='style.css'>
-</head>
-<body>
-  <header class='site-header'>
-    <h1>Resumo Semanal do Agronegócio</h1>
-    <p class='meta'>Semana 45 – de 3 a 9 de novembro de 2025</p>
-  </header>
-  
-<section class='kpis'>
-  <h2>Indicadores da Semana</h2>
-  <ul class='kpi-list'>
-    <li><strong>Dólar (USD/BRL):</strong> R$ 5,33 (07/11/2025)</li><li><strong>Soja (CEPEA, R$/sc):</strong> R$ 138,86 (07/11/2025)</li><li><strong>Milho (futuro B3, R$/sc):</strong> R$ 67,78 (Nov 2025)</li><li><strong>Boi gordo (R$/@):</strong> R$ 322,00 (07/11/2025)</li><li><strong>Selic (%):</strong> 15,00% (Copom, 05/11/2025)</li>
-  </ul>
-</section>
+      <!-- ✅ Formulário funcional com Formspree -->
+      <form id="subscribe-form" action="https://formspree.io/f/mblpbyjp" method="POST" style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:center;margin-top:10px;">
+        <input type="email" name="email" placeholder="Seu e-mail" aria-label="Seu e-mail" required 
+               style="padding:8px 12px;border-radius:6px;border:1px solid #ccc;min-width:220px;font-family:'Montserrat',sans-serif;">
+        <input type="hidden" name="_next" value="https://amezzomo.github.io/boletim_agro_sul/obrigado.html">
+        <button id="subscribe-button" class="cta" type="submit" style="background:#1E3A29;color:#fff;border:none;padding:8px 16px;border-radius:6px;font-weight:600;cursor:pointer;">
+          Assine por e-mail
+        </button>
+        <span id="subscribe-status" style="font-size:0.9rem;margin-left:8px;color:#1E3A29;font-weight:500;"></span>
+      </form>
+      <!-- 🔁 Fim do formulário atualizado -->
+    </header>
 
-  <main class='content'>
-    <article class='boletim'>
-      <section class='intro'><h2>Introdução</h2><p>A semana foi marcada por ajustes de mercado e atenção redobrada aos custos de produção. No cenário internacional, a expectativa de reabertura do mercado japonês para a carne bovina brasileira ganhou força, enquanto internamente a combinação de juros altos, retração no seguro rural e elevação no custo de fertilizantes trouxe cautela às decisões de investimento dos produtores.</p></section>
-      <section class='destaques'><h2>Destaques Nacionais</h2>
-        <article class='destaque'><h3>Mercado de Carne – Japão pode reabrir as portas ao Brasil</h3><p>A visita técnica de representantes japoneses a frigoríficos brasileiros reacendeu as expectativas de reabertura do mercado do Japão à carne bovina nacional. A medida é vista como estratégica para diversificar destinos e valorizar cortes de maior padrão. O impacto sobre os preços da arroba tende a ser gradual, mas sinaliza um cenário positivo para o segmento de exportação e para os pecuaristas que investem em confinamento e rastreabilidade.</p></article>
-        <article class='destaque'><h3>Seguro Rural – Menor cobertura em 10 anos</h3><p>O setor sinaliza retração nas contratações de seguro rural, que podem atingir o menor nível em uma década. A redução da subvenção federal e o aumento do custo das apólices têm limitado o acesso de médios e pequenos produtores. A tendência preocupa o mercado financeiro e cooperativas, pois amplia a exposição ao risco climático e de renda, especialmente nas regiões com histórico de estiagens recorrentes.</p></article>
-        <article class='destaque'><h3>Crédito e Financiamento – Juros ainda travam o investimento</h3><p>A manutenção da Selic em 15% pelo Banco Central mantém o crédito rural caro e restrito. Com isso, produtores seguem priorizando capital próprio, operações curtas e renegociação de dívidas. As linhas de investimento em tecnologia, armazenagem e ampliação de área seguem represadas. Bancos e cooperativas relatam procura elevada por prorrogação de prazos e renegociações de custeio.</p></article>
-        <article class='destaque'><h3>Insumos e Fertilizantes – Custos sobem com importações recordes</h3><p>O mercado de fertilizantes permanece pressionado, com alta nos preços e necessidade de importações recordes para atender à próxima safra. A redução da oferta global e a valorização do fósforo têm encarecido o pacote de adubação. Produtores avaliam ajustes nas fórmulas e na quantidade aplicada, buscando equilibrar custo e produtividade. Revendas relatam maior antecipação de pedidos e renegociação de volumes.</p></article>
-      </section>
-      <section class='regional'><h2>Mercado Regional</h2>
-        <article class='regional-item'><h3>Fertilizantes e Insumos</h3><p>As últimas semanas foram de boa movimentação comercial nas revendas e cooperativas da região. Apesar da leve alta nos custos, muitos produtores anteciparam compras de adubos e defensivos para garantir disponibilidade antes do fechamento da janela de plantio. O fluxo bancário segue estável, mas com análise de crédito mais criteriosa.</p></article>
-        <article class='regional-item'><h3>Grãos e Safra</h3><p>Com o clima alternando períodos de chuva e sol, o plantio avança, ainda que com atraso em algumas áreas de maior umidade. A soja permanece como foco principal, com o milho safrinha ainda em planejamento. Cotações seguem firmes, sustentadas pelo dólar valorizado e menor oferta no mercado físico.</p></article>
-        <article class='regional-item'><h3>Crédito e Financiamento</h3><p>Os bancos mantêm postura conservadora nas liberações. Há demanda por prorrogação de custeio e pedidos de revisão de limite em cooperativas. Produtores relatam juros efetivos elevados nas linhas de investimento e buscam alternativas via barter e financiamentos diretos com fornecedores.</p></article>
-      </section>
-      <section class='podcast'><h2>Podcast da Semana</h2>
-        <p>Disponibilizamos o podcast: <strong>Agronegócio 2025 - Crise de Crédito, Custo Alto e o Paradoxo da Safra Recorde</strong>. Ouça abaixo ou <a href='podcast/Agronegócio 2025_ Crise de Crédito, Custo Alto e o Paradoxo da Safra Recorde.mp3' download>baixe o episódio (MP3)</a>.</p>
-        <audio controls preload='none'><source src='podcast/Agronegócio 2025_ Crise de Crédito, Custo Alto e o Paradoxo da Safra Recorde.mp3' type='audio/mpeg'>Seu navegador não suporta áudio.</audio>
-      </section>
-      <section class='historico'><h2>Histórico de Boletins</h2>
-<ul>
-<li><a href='boletim_45_2025.html'>Semana 45 – 03/11/2025 a 09/11/2025</a></li>
-<li><a href='#'>Semana 44 – 27/10/2025 a 02/11/2025</a></li>
-<li><a href='#'>Semana 43 – 20/10/2025 a 26/10/2025</a></li>
-</ul>
+    <div class="grid">
+      <main class="card analysis-content" role="main">
+<header><h1>Resumo Semanal do Agronegócio</h1><p class='meta'>Semana 45 – de 3 a 9 de novembro de 2025</p></header>
+<section class='intro'><h2>Introdução</h2><p>A semana foi marcada por ajustes de mercado e atenção redobrada aos custos de produção. No cenário internacional, a expectativa de reabertura do mercado japonês para a carne bovina brasileira ganhou força, enquanto internamente a combinação de juros altos, retração no seguro rural e elevação no custo de fertilizantes trouxe cautela às decisões de investimento dos produtores.</p></section>
+<section class='destaques'><h2>Destaques Nacionais</h2>
+<article class='destaque'><h3>Mercado de Carne – Japão pode reabrir as portas ao Brasil</h3><p>A visita técnica de representantes japoneses a frigoríficos brasileiros reacendeu as expectativas de reabertura do mercado do Japão à carne bovina nacional. A medida é vista como estratégica para diversificar destinos e valorizar cortes de maior padrão. O impacto sobre os preços da arroba tende a ser gradual, mas sinaliza um cenário positivo para o segmento de exportação e para os pecuaristas que investem em confinamento e rastreabilidade.</p></article>
+<article class='destaque'><h3>Seguro Rural – Menor cobertura em 10 anos</h3><p>O setor sinaliza retração nas contratações de seguro rural, que podem atingir o menor nível em uma década. A redução da subvenção federal e o aumento do custo das apólices têm limitado o acesso de médios e pequenos produtores. A tendência preocupa o mercado financeiro e cooperativas, pois amplia a exposição ao risco climático e de renda, especialmente nas regiões com histórico de estiagens recorrentes.</p></article>
+<article class='destaque'><h3>Crédito e Financiamento – Juros ainda travam o investimento</h3><p>A manutenção da Selic em 15% pelo Banco Central mantém o crédito rural caro e restrito. Com isso, produtores seguem priorizando capital próprio, operações curtas and renegociação de dívidas. As linhas de investimento em tecnologia, armazenagem e ampliação de área seguem represadas. Bancos e cooperativas relatam procura elevada por prorrogação de prazos e renegociações de custeio.</p></article>
+<article class='destaque'><h3>Insumos e Fertilizantes – Custos sobem com importações recordes</h3><p>O mercado de fertilizantes permanece pressionado, com alta nos preços e necessidade de importações recordes para atender à próxima safra. A redução da oferta global e a valorização do fósforo têm encarecido o pacote de adubação. Produtores avaliam ajustes nas fórmulas e na quantidade aplicada, buscando equilibrar custo e produtividade. Revendas relatam maior antecipação de pedidos e renegociação de volumes.</p></article>
 </section>
-
+<section class='regional'><h2>Mercado Regional</h2>
+<article class='regional-item'><h3>Fertilizantes e Insumos</h3><p>As últimas semanas foram de boa movimentação comercial nas revendas e cooperativas da região. Apesar da leve alta nos custos, muitos produtores anteciparam compras de adubos e defensivos para garantir disponibilidade antes do fechamento da janela de plantio. O fluxo bancário segue estável, mas com análise de crédito mais criteriosa.</p></article>
+<article class='regional-item'><h3>Grãos e Safra</h3><p>Com o clima alternando períodos de chuva e sol, o plantio avança, ainda que com atraso em algumas áreas de maior umidade. A soja permanece como foco principal, com o milho safrinha ainda em planejamento. Cotações seguem firmes, sustentadas pelo dólar valorizado e menor oferta no mercado físico.</p></article>
+<article class='regional-item'><h3>Crédito e Financiamento</h3><p>Os bancos mantêm postura conservadora nas liberações. Há demanda por prorrogação de custeio e pedidos de revisão de limite em cooperativas. Produtores relatam juros efetivos elevados nas linhas de investimento e buscam alternativas via barter e financiamentos diretos com fornecedores.</p></article>
+</section>
+<section class='podcast'><h2>Podcast da Semana</h2>
+<p>Disponibilizamos o podcast: <strong>Agronegócio 2025_ Crise de Crédito, Custo Alto e o Paradoxo da Safra Recorde.mp3</strong>. Ouça abaixo ou <a href='podcast/Agronegócio 2025_ Crise de Crédito, Custo Alto e o Paradoxo da Safra Recorde.mp3' download>baixe o episódio (MP3)</a>.</p>
+<audio controls preload='none'><source src='podcast/Agronegócio 2025_ Crise de Crédito, Custo Alto e o Paradoxo da Safra Recorde.mp3' type='audio/mpeg'>Seu navegador não suporta áudio.</audio>
+</section>
+<section class='historico'><h2>Histórico de Boletins</h2><ul><li><a href='boletim_45_2025.html'>Semana 45 – 03/11/2025 a 09/11/2025</a></li></ul></section>
 <section class='conclusao'><h2>Conclusão</h2><p>A semana encerra com um cenário de cautela e expectativa. O avanço nas negociações com o Japão e a firmeza das cotações indicam um horizonte promissor para a carne bovina, mas os desafios internos — juros altos, custos de insumos e menor cobertura de seguro — seguem exigindo gestão precisa e planejamento financeiro no campo. O foco agora se volta para o comportamento do clima e o ritmo do plantio nas próximas duas semanas.</p></section>
-    </article>
-    <aside class='download'><p><a href='Boletim_Agro_Semanal_Semana_45_2025.docx' download>Baixar versão .docx</a></p></aside>
-    <footer class='footer'><p>Fontes: Canal Kellen Severo (YouTube), Reuters, DatamarNews, CNseg, ANDA, Agrolink.</p>
-      <p><a href='unsubscribe.html'>Cancelar inscrição</a></p></footer>
-  </main>
-</body></html>
+<footer class='footer'><p>Fontes: Canal Kellen Severo (YouTube), Reuters, DatamarNews, CNseg, ANDA, Agrolink.</p><p><a href='unsubscribe.html'>Cancelar inscrição</a></p></footer>
 </main>
-</body></html>
+
+      <aside class="card" role="complementary">
+        <div class="kpi">
+          <div>
+            <p class="section-title">Crise de Crédito (KPIs)</p>
+            <p class="muted">Inadimplência geral (Jul/25)</p>
+            <p class="value kpi-value">5.14%</p>
+          </div>
+        </div>
+
+        <div style="margin-top:18px;">
+          <p class="section-title">Termômetro dos Fertilizantes</p>
+          <table class="table">
+            <thead><tr><th>Produto</th><th>USD/ton (CFR)</th></tr></thead>
+            <tbody>
+              <tr><td>Uréia (N)</td><td>~422</td></tr>
+              <tr><td>MAP (P)</td><td>~718</td></tr>
+              <tr><td>KCl (K)</td><td>~362</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="margin-top:18px;">
+          <p class="section-title">Preços de Soja (Foco Sul)</p>
+          <table class="table">
+            <thead><tr><th>Região</th><th>Porto</th></tr></thead>
+            <tbody>
+              <tr><td>Rio Grande do Sul</td><td>~R$138,50/saca</td></tr>
+              <tr><td>Paraná</td><td>~R$139,50/saca</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="margin-top:18px;">
+          <p class="section-title">Fontes</p>
+          <p class="muted">Agrinvest | Notícias Agrícolas | Kynetec | Jovem Pan | CEPEA | Abifina</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer class="footer" role="contentinfo">
+      <p>Boletim Agro Sul — Edição Semanal • Semana 44 / 02-11-2025</p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/charts.js"></script>
+
+  <!-- 🔁 Script de feedback do formulário -->
+  <script>
+    const form = document.getElementById('subscribe-form');
+    const button = document.getElementById('subscribe-button');
+    const status = document.getElementById('subscribe-status');
+    form.addEventListener('submit', function(event) {
+      status.textContent = 'Enviando...';
+      button.disabled = true;
+      setTimeout(() => {
+        status.textContent = '✅ Enviado com sucesso!';
+        button.disabled = false;
+      }, 1500);
+    });
+  </script>
+</body>
+</html>
