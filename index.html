@@ -121,5 +121,61 @@
       }, 1500);
     });
   </script>
+
+<aside id="kpi-panel" class="fixed right-0 top-20 w-80 bg-white border-l border-gray-200 shadow-lg p-4 overflow-y-auto" style="height:calc(100vh - 5rem); z-index:9999;">
+  <h2 class="text-xl font-semibold mb-4 text-[#47A8F5] flex items-center"><span class="mr-2">📊</span>Indicadores da Semana</h2>
+  <div class="space-y-4">
+    <div class="bg-gray-50 rounded-lg p-3 shadow-sm">
+      <h3 class="text-sm font-medium text-gray-600">Dólar</h3>
+      <p class="text-2xl font-bold kpi-value">R$ 5,33 <span class="trend-up text-sm">↑ 0,5%</span></p>
+    </div>
+    <div class="bg-gray-50 rounded-lg p-3 shadow-sm">
+      <h3 class="text-sm font-medium text-gray-600">Soja (CEPEA)</h3>
+      <p class="text-2xl font-bold kpi-value">R$ 138,86/sc <span class="trend-down text-sm">↓ 0,4%</span></p>
+    </div>
+    <div class="bg-gray-50 rounded-lg p-3 shadow-sm">
+      <h3 class="text-sm font-medium text-gray-600">Milho (B3)</h3>
+      <p class="text-2xl font-bold kpi-value">R$ 67,78/sc <span class="trend-stable text-sm">↔</span></p>
+    </div>
+    <div class="bg-gray-50 rounded-lg p-3 shadow-sm">
+      <h3 class="text-sm font-medium text-gray-600">Boi Gordo</h3>
+      <p class="text-2xl font-bold kpi-value">R$ 322,00/@ <span class="trend-up text-sm">↑ 1,2%</span></p>
+    </div>
+    <div class="bg-gray-50 rounded-lg p-3 shadow-sm">
+      <h3 class="text-sm font-medium text-gray-600">Selic</h3>
+      <p class="text-2xl font-bold kpi-value">15,00% <span class="trend-stable text-sm">↔</span></p>
+    </div>
+    <div class="chart-container mt-6" style="height:160px;">
+      <canvas id="kpiFertilizerChart"></canvas>
+    </div>
+  </div>
+</aside>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const ctx = document.getElementById('kpiFertilizerChart')?.getContext('2d');
+  if (ctx) {
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Ureia','MAP','KCL'],
+        datasets: [{
+          label: 'USD/t',
+          data: [435,715,360],
+          backgroundColor: ['#47A8F5','#F7C548','#4CAF50']
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: { x: { display:false }, y: { beginAtZero:true } }
+      }
+    });
+  }
+});
+</script>
+
 </body>
 </html>
