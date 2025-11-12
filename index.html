@@ -15,16 +15,16 @@
 </head>
 <body>
   <div class="container">
-    <header class="header" role="banner">
+    <header class="header" role="banner" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;">
       <img src="assets/logo.png" alt="Boletim Agro Sul - logo" />
-      <div class="header-title">
+      <div class="header-title" style="flex-grow: 1; m      <div class="header-title">
         <h1 class="h1">Boletim Agro Sul</h1>
         <p class="h2">Edição semanal • Semana 45 — 09 de novembro de 2025</p>
       </div>
 
       <!-- Link para o Histórico -->
-      <div style="text-align: center; margin-top: 10px;">
-        <a href="historico.html" class="edition-link" style="background: #1E3A29; color: #fff; padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-block;">
+      <div class="history-link-container">
+        <a href="historico.html" class="cta">
           Acessar Histórico de Análises Passadas
         </a>
       </div>
@@ -33,7 +33,7 @@
       <!-- Formulário de assinatura (mantido) -->
       <form id="subscribe-form" action="https://formspree.io/f/mblpbyjp" method="POST" style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:center;margin-top:10px;">
         <input type="email" name="email" placeholder="Seu e-mail" aria-label="Seu e-mail" required 
-               style="padding:8px 12px;border-radius:6px;border:1px solid #ccc;min-width:220px;font-family:'Montserrat',sans-serif;">
+               style="padding:8px 12px;border-radius:6px;border:1px solid #ccc;min-width:220px;font-family:\'Montserrat\',sans-serif;">
         <input type="hidden" name="_next" value="https://amezzomo.github.io/boletim_agro_sul/obrigado.html">
         <button id="subscribe-button" class="cta" type="submit" style="background:#1E3A29;color:#fff;border:none;padding:8px 16px;border-radius:6px;font-weight:600;cursor:pointer;">
           Assine por e-mail
@@ -41,7 +41,7 @@
         <span id="subscribe-status" style="font-size:0.9rem;margin-left:8px;color:#1E3A29;font-weight:500;"></span>
       </form>
       <!-- Fim do formulário -->
-    </header>
+    </header>>
 
     <div class="grid">
       <main class="card analysis-content" role="main">
@@ -56,9 +56,29 @@
           </ul>
           <p style="font-size: 0.85rem; color: #666; margin-top: 10px;">**Atualizado toda terça-feira.**</p>
         </div>
-        <!-- Fim da Mensagem de Boas-Vindas -->
-
         <h2 class="section-title">Análise Semanal do Agronegócio: A Profunda Crise de Crédito, Análises de Risco para 2025 e o Atraso Crítico no Plantio Gaúcho</h2>
+        
+        <!-- Player — Podcast Atualizado (Movido para o topo) -->
+        <section id="podcast-player" class="card" style="margin:12px 0;padding:14px;border-radius:10px;background:#fff;box-shadow:0 3px 10px rgba(16,42,67,0.04);">
+          <h3 class="section-title">Podcast: Agronegócio 2025 - Crise de Crédito, Custo Alto e o Paradoxo da Safra Recorde</h3>
+          <p class="muted" style="margin-top:4px;">Episódio: Análise Completa da Semana 45 (09/11/2025)</p>
+          <audio controls preload="none" style="width:100%;margin-top:8px;">
+            <source src="podcast/podcast_semana45.mp3" type="audio/mpeg">
+            Seu navegador não suporta o elemento de áudio.
+          </audio>
+          <p class="small muted" style="margin-top:8px;">Arquivo: podcast/podcast_semana45.mp3. Duração aproximada: 7:00 min.</p>
+        </section>
+        <!-- FIM: Player — Podcast -->
+
+        <!-- Link para o Infográfico (Movido para o topo) -->
+        <div style="text-align: center; margin: 30px 0; padding: 20px; background: #e8f0f5; border-radius: 8px;">
+          <h3 style="margin-top: 0; color: #1E3A29;">Visualização de Dados: Infográfico Interativo</h3>
+          <p>Acesse o infográfico completo com o Termômetro de Fertilizantes e mais dados de mercado:</p>
+          <a href="infografico_semana45.html" class="edition-link" style="background: #4CAF50; color: #fff; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 700; display: inline-block; margin-top: 10px;">
+            📊 Ver Infográfico da Semana 45
+          </a>
+        </div>
+        <!-- Fim do Link para o Infográfico -->
         
         <!-- Conteúdo da Análise (Adaptado do Markdown) -->
         <p>A manchete desta semana é o aprofundamento da crise de crédito no campo, classificada pela Federação da Agricultura do Estado do Rio Grande do Sul (Farsul) como a "maior crise de crédito rural desde o Plano Real". O levantamento da Farsul, divulgado no final de outubro, revela uma retração drástica nos recursos para a safra 2025/26: em nível nacional, o custeio caiu 23% e os investimentos despencaram 44% no primeiro trimestre do ciclo (julho a setembro).</p>
@@ -186,27 +206,7 @@
           </table>
         </div>
         
-        <!-- Link para o Infográfico -->
-        <div style="text-align: center; margin: 30px 0; padding: 20px; background: #e8f0f5; border-radius: 8px;">
-          <h3 style="margin-top: 0; color: #1E3A29;">Visualização de Dados: Infográfico Interativo</h3>
-          <p>Acesse o infográfico completo com o Termômetro de Fertilizantes e mais dados de mercado:</p>
-          <a href="infografico_semana45.html" class="edition-link" style="background: #4CAF50; color: #fff; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 700; display: inline-block; margin-top: 10px;">
-            📊 Ver Infográfico da Semana 45
-          </a>
-        </div>
-        <!-- Fim do Link para o Infográfico -->
-
-        <!-- Player — Podcast Atualizado -->
-        <section id="podcast-player" class="card" style="margin:12px 0;padding:14px;border-radius:10px;background:#fff;box-shadow:0 3px 10px rgba(16,42,67,0.04);">
-          <h3 class="section-title">Podcast: Agronegócio 2025 - Crise de Crédito, Custo Alto e o Paradoxo da Safra Recorde</h3>
-          <p class="muted" style="margin-top:4px;">Episódio: Análise Completa da Semana 45 (09/11/2025)</p>
-          <audio controls preload="none" style="width:100%;margin-top:8px;">
-            <source src="podcast/podcast_semana45.mp3" type="audio/mpeg">
-            Seu navegador não suporta o elemento de áudio.
-          </audio>
-          <p class="small muted" style="margin-top:8px;">Arquivo: podcast/podcast_semana45.mp3. Duração aproximada: 7:00 min.</p>
-        </section>
-        <!-- FIM: Player — Podcast -->
+        
 
         <!-- Referências (Simplificadas, pois o foco é a newsletter) -->
         <h2 style="margin-top: 40px;">Fontes e Referências</h2>
