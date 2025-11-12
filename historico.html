@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Histórico de Análises - Boletim Agro Sul</title>
+  <meta name="description" content="Acesse todas as edições anteriores do Boletim Agro Sul e acompanhe a evolução das análises de mercado.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .history-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .history-card {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 20px;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .history-card:hover {
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+      transform: translateY(-2px);
+    }
+    .history-card h3 {
+      margin: 0 0 10px 0;
+      font-size: 1.1rem;
+      color: #1E3A29;
+    }
+    .history-card .edition-date {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+    }
+    .history-card .edition-description {
+      color: #555;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+    .history-card .edition-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .edition-link {
+      display: inline-block;
+      padding: 6px 12px;
+      background: #1E3A29;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .edition-link:hover {
+      background: #152a1f;
+    }
+    .edition-link.secondary {
+      background: #e8e8e8;
+      color: #333;
+    }
+    .edition-link.secondary:hover {
+      background: #d0d0d0;
+    }
+    .breadcrumb {
+      margin-bottom: 20px;
+      font-size: 0.9rem;
+    }
+    .breadcrumb a {
+      color: #1E3A29;
+      text-decoration: none;
+    }
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header" role="banner">
+      <img src="assets/logo.png" alt="Boletim Agro Sul - logo" />
+      <div class="header-title">
+        <h1 class="h1">Boletim Agro Sul</h1>
+        <p class="h2">Histórico de Análises • Acesso a Edições Anteriores</p>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main class="card analysis-content" role="main">
+        <div class="breadcrumb">
+          <a href="index.html">← Voltar para Edição Atual</a>
+        </div>
+
+        <h2 class="section-title">Histórico de Edições</h2>
+        <p>Aqui você pode acessar todas as edições anteriores do Boletim Agro Sul. Cada edição contém análises detalhadas sobre o mercado de fertilizantes, defensivos agrícolas, preços de grãos e a situação do plantio na Região Sul do Brasil.</p>
+
+        <div class="history-grid">
+          <!-- Semana 45 - 09/11/2025 -->
+          <div class="history-card">
+            <h3>Semana 45 — 09 de Novembro de 2025</h3>
+            <div class="edition-date">📅 Publicado em: 09/11/2025</div>
+            <div class="edition-description">
+              <strong>Tema Principal:</strong> Crise de Crédito, Custo Alto e o Paradoxo da Safra Recorde. Análise profunda sobre a maior crise de crédito rural desde o Plano Real, impacto nos custos de fertilizantes (N, P, K) e o contraste entre o avanço no Paraná e o atraso crítico no Rio Grande do Sul.
+            </div>
+            <div class="edition-links">
+              <a href="boletim_45_2025.html" class="edition-link">📄 Análise Completa</a>
+              <a href="infografico_semana45.html" class="edition-link secondary">📊 Infográfico</a>
+              <a href="podcast/podcast_semana45.mp3" class="edition-link secondary">🎙️ Podcast</a>
+            </div>
+          </div>
+
+          <!-- Semana 44 - 02/11/2025 -->
+          <div class="history-card">
+            <h3>Semana 44 — 02 de Novembro de 2025</h3>
+            <div class="edition-date">📅 Publicado em: 02/11/2025</div>
+            <div class="edition-description">
+              <strong>Tema Principal:</strong> Custos de Fertilizantes, Defensivos Agrícolas e Preços de Grãos. Análise integrada de custos de N, P, K; defensivos agrícolas; preços de soja, milho e trigo; e avanço do plantio na Região Sul.
+            </div>
+            <div class="edition-links">
+              <a href="index.html" class="edition-link">📄 Análise Completa</a>
+            </div>
+          </div>
+
+          <!-- Placeholder para futuras edições -->
+          <div class="history-card" style="opacity: 0.6;">
+            <h3>Semana 43 — 26 de Outubro de 2025</h3>
+            <div class="edition-date">📅 Publicado em: 26/10/2025</div>
+            <div class="edition-description">
+              <strong>Tema Principal:</strong> Preparação para a Safra 2025/26. Análise de pré-plantio, custos iniciais e perspectivas de crédito rural.
+            </div>
+            <div class="edition-links">
+              <a href="#" class="edition-link" style="opacity: 0.5; cursor: not-allowed;">📄 Em breve</a>
+            </div>
+          </div>
+        </div>
+
+        <h2 style="margin-top: 40px;">Como Usar o Histórico</h2>
+        <p>O histórico de análises permite que você:</p>
+        <ul>
+          <li><strong>Acompanhe a evolução dos preços:</strong> Compare os preços de fertilizantes e grãos ao longo do tempo.</li>
+          <li><strong>Entenda as tendências de mercado:</strong> Veja como o mercado evolui semana a semana.</li>
+          <li><strong>Tome decisões informadas:</strong> Use as análises passadas como referência para decisões futuras.</li>
+          <li><strong>Acesse os infográficos:</strong> Visualize dados-chave em formato gráfico.</li>
+          <li><strong>Ouça os podcasts:</strong> Acompanhe as análises em áudio para consumir o conteúdo de forma prática.</li>
+        </ul>
+
+        <h2 style="margin-top: 40px;">Sobre o Boletim Agro Sul</h2>
+        <p>O Boletim Agro Sul é uma newsletter semanal que fornece análises aprofundadas sobre o mercado de agronegócio, com foco especial em fertilizantes, defensivos agrícolas e o cenário econômico-agrícola da Região Sul do Brasil (RS, SC, PR). Nosso objetivo é posicionar você como uma referência de mercado confiável, fornecendo informações de alta qualidade que vão além da simples venda de produtos.</p>
+        <p>Cada edição é publicada toda <strong>terça-feira</strong> e inclui análise textual detalhada, infográfico interativo e podcast exclusivo.</p>
+      </main>
+
+      <aside class="card" role="complementary">
+        <div class="kpi">
+          <div>
+            <p class="section-title">Total de Edições</p>
+            <p class="muted">Disponíveis no histórico</p>
+            <p class="value kpi-value">2+</p>
+          </div>
+        </div>
+
+        <div style="margin-top: 18px;">
+          <p class="section-title">Frequência de Atualização</p>
+          <p class="muted">Toda terça-feira</p>
+          <p style="font-size: 1.1rem; margin-top: 8px;">📅 Próxima edição em breve</p>
+        </div>
+
+        <div style="margin-top: 18px;">
+          <p class="section-title">Conteúdo por Edição</p>
+          <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="margin: 8px 0;">📄 Análise textual</li>
+            <li style="margin: 8px 0;">📊 Infográfico interativo</li>
+            <li style="margin: 8px 0;">🎙️ Podcast exclusivo</li>
+          </ul>
+        </div>
+
+        <div style="margin-top: 18px;">
+          <p class="section-title">Temas Cobertos</p>
+          <p class="muted">Fertilizantes (N, P, K) • Defensivos Agrícolas • Preços de Grãos • Crédito Rural • Clima e Plantio • Análise Regional (RS, SC, PR)</p>
+        </div>
+      </aside>
+    </div>
+
+    <footer class="footer" role="contentinfo">
+      <p>Boletim Agro Sul — Histórico de Análises • Atualizado em 09/11/2025</p>
+    </footer>
+  </div>
+</body>
+</html>
