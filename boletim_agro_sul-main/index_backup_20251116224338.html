@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Boletim Agro Sul - Edição Semana 45 (09/11/2025)</title>
+  <meta name="description" content="Análise semanal de mercado, custos e clima para produtores do Sul do Brasil (RS, SC, PR). Crise de Crédito, Custo Alto e o Paradoxo da Safra Recorde.">
+  <meta property="og:title" content="Boletim Agro Sul - Semana 45 / 09-11-2025">
+  <meta property="og:description" content="Análise profunda sobre a maior crise de crédito rural desde o Plano Real, impacto nos custos de fertilizantes (N, P, K) e o contraste entre o avanço no Paraná e o atraso crítico no Rio Grande do Sul.">
+  <meta property="og:image" content="assets/og-boletim-semana45.png"> <!-- Placeholder para nova imagem OG -->
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/charts.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header class="header" role="banner">
+      <img src="assets/logo.png" alt="Boletim Agro Sul - logo" />
+      <div class="header-title">
+        <h1 class="h1">Boletim Agro Sul</h1>
+        <p class="h2">Edição semanal • Semana 45 — 09 de novembro de 2025</p>
+      </div>
+
+      <!-- Formulário de assinatura -->
+      <form id="subscribe-form" action="https://formspree.io/f/mblpbyjp" method="POST">
+        <input type="email" name="email" placeholder="Seu e-mail" aria-label="Seu e-mail" required>
+        <input type="hidden" name="_next" value="https://amezzomo.github.io/boletim_agro_sul/obrigado.html">
+        <button id="subscribe-button" class="cta" type="submit">Assine por e-mail</button>
+        <span id="subscribe-status"></span>
+      </form>
+      <!-- Fim do formulário -->
+    </header>
+
+    <div class="grid">
+      <main class="card analysis-content" role="main">
+        <!-- Mensagem de Boas-Vindas e Frequência -->
+        <div class="welcome-box">
+          <h2 class="section-title">Bem-vindo ao Boletim Agro Sul!</h2>
+          <p>Sua fonte semanal de análise aprofundada para o agronegócio do Sul do Brasil. Nesta edição, você encontrará:</p>
+          <ul>
+            <li>🎙️ Podcast Exclusivo (Análise em Áudio)</li>
+            <li>📊 Infográfico Interativo (Termômetro de Fertilizantes)</li>
+            <li>📄 Análise Textual Detalhada (Crise de Crédito e Safra)</li>
+          </ul>
+          <p class="update-frequency">**Atualizado toda terça-feira.**</p>
+        </div>
+        <!-- Fim da Mensagem de Boas-Vindas -->
+
+        <!-- Player — Podcast -->
+        <section id="podcast-player" class="card-section">
+          <h3 class="section-title">Podcast: Agronegócio 2025 - Crise de Crédito, Custo Alto e o Paradoxo da Safra Recorde</h3>
+          <p class="muted">Episódio: Análise Completa da Semana 45 (09/11/2025)</p>
+          <audio controls preload="none" style="width:100%;margin-top:8px;">
+            <source src="podcast/podcast_semana45.mp3" type="audio/mpeg">
+            Seu navegador não suporta o elemento de áudio.
+          </audio>
+          <p class="small muted">Arquivo: podcast/podcast_semana45.mp3. Duração aproximada: 7:00 min.</p>
+        </section>
+        <!-- FIM: Player — Podcast -->
+
+        <!-- Link para o Infográfico -->
+        <div class="infographic-link-box">
+          <h3 class="section-title">Visualização de Dados: Infográfico Interativo</h3>
+          <p>Acesse o infográfico completo com o Termômetro de Fertilizantes e mais dados de mercado:</p>
+          <a href="infografico_semana45.html" class="cta-green">
+            📊 Ver Infográfico da Semana 45
+          </a>
+        </div>
+        <!-- Fim do Link para o Infográfico -->
+
+        <h2 class="section-title">Análise Semanal do Agronegócio: A Profunda Crise de Crédito, Análises de Risco para 2025 e o Atraso Crítico no Plantio Gaúcho</h2>
+        
+        <!-- Conteúdo da Análise -->
+        <p>A manchete desta semana é o aprofundamento da crise de crédito no campo, classificada pela Federação da Agricultura do Estado do Rio Grande do Sul (Farsul) como a "maior crise de crédito rural desde o Plano Real".</p>
+        
+        <p>O Rio Grande do Sul reflete essa realidade de forma ainda mais aguda, com quedas de 25% no custeio e 39% nos investimentos. Este cenário é agravado por uma inadimplência recorde.</p>
+        
+        <p>O impacto dessa "tempestade perfeita" de juros altos, inadimplência e restrição de capital é visto diretamente no campo. Para o produtor gaúcho, essa crise de liquidez é a principal causa do atraso severo no plantio da soja.</p>
+
+        <h2>Análise dos Especialistas: O Paradoxo de 2025, Segundo Kellen Severo</h2>
+        <p>As análises de Kellen Severo (Jovem Pan) focam no grande paradoxo que definirá o próximo ano: a projeção de um 2025 recorde contra a realidade de um 2024/2025 operacionalmente arriscado.</p>
+        
+        <h2>Termômetro dos Fertilizantes: Custo Elevado para 2025/26 e Mercado Dividido</h2>
+        <p>A análise de Jeferson Souza (Agrinvest) da última semana foca nos custos da safra 2025/26, que ele confirma que será "inevitavelmente mais cara".</p>
+        
+        <div style="overflow-x:auto; margin: 15px 0;">
+          <table class="table" style="width: 100%; min-width: 400px;">
+            <thead>
+              <tr>
+                <th>Nutriente (Produto)</th>
+                <th>Preço (USD/tonelada - CFR Brasil)</th>
+                <th>Tendência (Início de Novembro)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Nitrogênio (Uréia)</td><td>~ $425</td><td>**ALTA**</td></tr>
+              <tr><td>Fósforo (MAP)</td><td>~ $658</td><td>**QUEDA**</td></tr>
+              <tr><td>Potássio (KCl)</td><td>~ $360 - $365</td><td>**ESTÁVEL**</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2>Foco no Sul: O Contraste Extremo entre o Atraso Gaúcho e o Avanço Paranaense</h2>
+        <p>A situação da Região Sul é a que melhor ilustra a safra "desigual" do Brasil. Os dois estados vizinhos vivem realidades opostas neste início de novembro.</p>
+        
+        <div style="overflow-x:auto; margin: 15px 0;">
+          <table class="table" style="width: 100%; min-width: 600px;">
+            <thead>
+              <tr><th>Estado</th><th>Cultura</th><th>% Plantada (Início Nov)</th><th>Análise de Ritmo</th><th>Principais Fatores</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>**Paraná**</td><td>Soja</td><td>**68% - 79%**</td><td>Acelerado, em fase final.</td><td>Chuvas regulares em outubro; capitalização.</td></tr>
+              <tr><td>**Rio Grande do Sul**</td><td>Soja</td><td>**5% - 9%**</td><td>**Atraso Crítico.**</td><td>**Crise de crédito**; estratégia de plantio tardio.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        
+        <h2 style="margin-top: 40px;">Fontes e Referências</h2>
+        <p class="muted">As informações desta análise foram compiladas de fontes especializadas como Farsul, CNA, Agrinvest, StoneX, Kynetec, DERAL-PR, EMATER/RS-Ascar e análises de mercado de Kellen Severo.</p>
+        
+      </main>
+
+      <aside class="card" role="complementary">
+        <div class="kpi">
+          <div>
+            <p class="section-title">Crise de Crédito (KPIs)</p>
+            <p class="muted">Inadimplência geral (Jul/25)</p>
+            <p class="value kpi-value">5.14%</p>
+          </div>
+        </div>
+
+        <div style="margin-top:18px;">
+          <p class="section-title">Termômetro dos Fertilizantes</p>
+          <table class="table">
+            <thead><tr><th>Produto</th><th>USD/ton (CFR)</th></tr></thead>
+            <tbody>
+              <tr><td>Uréia (N)</td><td>~425</td></tr>
+              <tr><td>MAP (P)</td><td>~658</td></tr>
+              <tr><td>KCl (K)</td><td>~360</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="margin-top:18px;">
+          <p class="section-title">Acesse o Histórico</p>
+          <p class="muted">Não perca nenhuma análise. Acesse as edições anteriores.</p>
+          <a href="historico.html" class="cta-secondary">Ver Todas as Edições</a>
+        </div>
+      </aside>
+    </div>
+
+    <footer class="footer" role="contentinfo">
+      <p>Boletim Agro Sul — Edição Semanal • Semana 45 / 09-11-2025</p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/charts.js"></script>
+
+  <script>
+    const form = document.getElementById('subscribe-form');
+    const button = document.getElementById('subscribe-button');
+    const status = document.getElementById('subscribe-status');
+    form.addEventListener('submit', function(event) {
+      status.textContent = 'Enviando...';
+      button.disabled = true;
+      setTimeout(() => {
+        status.textContent = '✅ Enviado com sucesso!';
+        button.disabled = false;
+      }, 1500);
+    });
+  </script>
+</body>
+</html>

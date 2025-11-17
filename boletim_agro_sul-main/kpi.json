@@ -1,0 +1,40 @@
+{
+  "generated_at": "2025-11-10T01:36:38.716146",
+  "kpis": {
+    "dolar": {
+      "label": "Dólar (USD/BRL)",
+      "value": "R$ 5,33",
+      "delta": "0.5%",
+      "trend": "up"
+    },
+    "soja": {
+      "label": "Soja (CEPEA)",
+      "value": "R$ 138,86/sc",
+      "delta": "-0.4%",
+      "trend": "down"
+    },
+    "milho": {
+      "label": "Milho (B3)",
+      "value": "R$ 67,78/sc",
+      "delta": "0.0%",
+      "trend": "stable"
+    },
+    "boi": {
+      "label": "Boi Gordo",
+      "value": "R$ 322,00/@",
+      "delta": "1.2%",
+      "trend": "up"
+    },
+    "selic": {
+      "label": "Selic",
+      "value": "15.00%",
+      "delta": "0.0%",
+      "trend": "stable"
+    }
+  },
+  "fertilizantes": {
+    "Ureia": 435,
+    "MAP": 715,
+    "KCL": 360
+  }
+}

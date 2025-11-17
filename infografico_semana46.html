@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumo Semanal do Agronegócio - 14/11/2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+       .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+           .chart-container {
+                height: 350px;
+            }
+        }
+       .icon {
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+        }
+       .kpi-value {
+             color: #47A8F5;
+        }
+       .trend-up {
+            color: #F24C4E;
+        }
+       .trend-down {
+            color: #4CAF50;
+        }
+       .trend-stable {
+            color: #F7C548;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-[#3E4A61] text-white p-6 shadow-md">
+        <h1 class="text-3xl font-bold text-center">Resumo Semanal do Agronegócio Brasileiro</h1>
+        <p class="text-center text-lg mt-1">Semana de 14 de Novembro de 2025</p>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <section id="manchete" class="md:col-span-2 bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-semibold mb-4 text-[#47A8F5] flex items-center"><span class="icon">📰</span>Manchete da Semana</h2>
+                <p class="mb-4">Clima Divergente: Plantio da soja no Brasil atinge 76% e segue em ritmo recorde, mas seca no MATOPIBA e replantio pontual em MT geram alerta no mercado.</p>
+                <div class="text-center bg-blue-50 p-6 rounded-lg">
+                    <p class="text-lg text-gray-700 mb-2">Plantio da Soja 2025/26 no Brasil (Estimativa Nacional)</p>
+                    <p class="text-6xl font-bold kpi-value">~76%</p>
+                    <p class="text-xl text-gray-600">da Área Prevista</p>
+                </div>
+                 <p class="mt-4 text-sm text-gray-600">Apesar do avanço, a irregularidade climática entre as principais regiões produtoras é o principal ponto de atenção e pode trazer volatilidade aos preços.</p>
+           </section>
+
+            <section id="analise" class="md:col-span-2 bg-white rounded-lg shadow-md p-6">
+                 <h2 class="text-2xl font-semibold mb-4 text-[#47A8F5] flex items-center"><span class="icon">👨‍🏫</span>Análise dos Especialistas</h2>
+                 <p class="mb-6">As análises focam no "cabo de guerra" entre a demanda global e a oferta brasileira, e no monitoramento climático crítico para a consolidação da safra.</p>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                     <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+                        <h3 class="text-lg font-semibold mb-2">Jeferson Souza (Agrinvest)</h3>
+                        <p class="text-sm">O mercado vive um "cabo de guerra". De um lado, a demanda chinesa aquecida, comprando soja dos EUA, dá sustentação aos preços em Chicago. Do outro, o plantio recorde no Brasil e o clima favorável no Sul colocam pressão de baixa. A definição da safrinha (custos altos vs. preços futuros do milho) segue como o principal desafio de rentabilidade.</p>
+                     </div>
+                     <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+                        <h3 class="text-lg font-semibold mb-2">Kellen Severo (Análise 3x1 do Agro)</h3>
+                        <p class="text-sm">Os temas da semana foram o clima: 1) As chuvas no RS foram "perfeitas" para consolidar a "arrancada" do plantio e garantir a germinação. 2) O "alerta vermelho" está focado no MATOPIBA, que segue muito seco, e em bolsões de MT que já registram replantio. 3) O mercado monitora a demanda chinesa, que sustenta Chicago.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="fertilizantes" class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-semibold mb-4 text-[#47A8F5] flex items-center"><span class="icon">🌡️</span>Termômetro dos Fertilizantes</h2>
+                <p class="mb-4">Mercado vê leve recuo nos nitrogenados com a demanda imediata mais calma, enquanto os demais nutrientes mantêm estabilidade nos portos (CFR).</p>
+                <h3 class="text-lg font-semibold mb-2 text-center">Preços Atuais CFR Brasil (USD/Tonelada)</h3>
+                 <div class="chart-container mb-4">
+                    <canvas id="fertilizerPriceChart"></canvas>
+                </div>
+                 <p class="text-sm text-center text-gray-600 mb-4">Preços médios referência para importação na segunda semana de novembro.</p>
+                <div class="mt-4 border-t pt-4">
+                    <h3 class="text-lg font-semibold mb-2">Tendências e Comportamento</h3>
+                    <ul class="list-disc list-inside space-y-1 text-sm">
+                        <li><strong>Nitrogênio (Uréia):</strong> Mercado em <span class="trend-down font-semibold">leve baixa</span> (<span class="icon trend-down">↓</span> ~$420/t). Compradores da safrinha retraídos e menor demanda global pressionaram ligeiramente o preço.</li>
+                        <li><strong>Fósforo (MAP):</strong> Preços <span class="trend-stable font-semibold">estáveis/firmes</span> (<span class="icon trend-stable">↔</span> ~$715/t). Mercado segue sustentado, sem grandes variações.</li>
+                        <li><strong>Potássio (KCL):</strong> Cotações <span class="trend-stable font-semibold">estáveis</span> (<span class="icon trend-stable">↔</span> ~$365/t). Preço segue acomodado com boa oferta global, mas firme no patamar atual.</li>
+                    </ul>
+                </div>
+            </section>
+
+             <section id="defensivos" class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-semibold mb-4 text-[#47A8F5] flex items-center"><span class="icon">🔬</span>Mercado de Defensivos Agrícolas</h2>
+                 <p class="mb-4">Com 76% da soja brasileira emergindo, a demanda se intensifica para o manejo preventivo de doenças e o controle de pragas iniciais.</p>
+                 <div class="text-center mb-4">
+                     <p class="text-md text-gray-700">Projeção de Crescimento da Área Tratada (2025 vs 2024)</p>
+                     <p class="text-4xl font-bold kpi-value trend-up">+3,4% <span class="text-2xl">↑</span></p>
+                     <p class="text-xs text-gray-500">(Fonte: Projeção Sindiveg)</p>
+                 </div>
+                 <h3 class="text-lg font-semibold mb-2 text-center">Distribuição de Uso (Ref. 1º Semestre 2025)</h3>
+                <div class="chart-container mb-4" style="height: 260px; max-height: 300px;">
+                    <canvas id="defensivosUsageChart"></canvas>
+                </div>
+                 <div class="mt-4 border-t pt-4">
+                    <h3 class="text-lg font-semibold mb-2">Tendências e Análise</h3>
+                    <ul class="list-disc list-inside space-y-1 text-sm">
+                        <li>O foco agora é a <span class="font-semibold">aplicação preventiva de fungicidas</span> para o controle da ferrugem asiática.</li>
+                        <li>Demanda por <span class="font-semibold">inseticidas</span> (percevejos e lagartas) também cresce com o desenvolvimento das plantas.</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section id="safrinha-pr" class="md:col-span-2 bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-semibold mb-4 text-[#F78154] flex items-center"><span class="icon">🌽</span>Foco Safrinha: Negociação de Insumos (PR)</h2>
+                <p class="mb-4">Com a soja do Paraná 95% plantada, o produtor vira a atenção para o milho safrinha, mas as negociações de insumos estão lentas.</p>
+                <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                    <h3 class="text-lg font-semibold mb-2">Produtor "Fazendo Conta"</h3>
+                    <p class="text-sm">Analistas no Paraná indicam que o ritmo de compra de fertilizantes e sementes para a safrinha está <span class="font-semibold">abaixo da média</span>. A causa é a margem apertada: os custos de NPK estão altos e os preços futuros do milho não reagem. O produtor paranaense está cauteloso, recalculando investimentos e, em alguns casos, pode reduzir a tecnologia aplicada.</p>
+                </div>
+            </section>
+
+            <section id="foco-sul" class="md:col-span-2 bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-semibold mb-4 text-[#47A8F5] flex items-center"><span class="icon">🌱</span>Foco no Sul: RS Dispara e Atinge 55-60% da Área</h2>
+                <p class="mb-6">O Rio Grande do Sul foi o grande destaque da semana, aproveitando as chuvas para avançar o plantio em ritmo muito forte. Paraná finaliza os trabalhos.</p>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+                        <h3 class="text-lg font-semibold mb-2">Rio Grande do Sul (RS)</h3>
+                        <p class="text-sm mb-3">As chuvas da semana foram "perfeitas" e permitiram um novo salto no plantio, que agora fica entre <span class="font-semibold">55% e 60%</span>. O ritmo é forte, a umidade do solo é boa e a germinação inicial é considerada ótima pela Emater/RS.</p>
+                         <div class="space-y-1 text-sm">
+                             <p><strong>Preços Soja (14/11/25):</strong></p>
+                            <p> <span class="font-medium">Porto (Rio Grande):</span> ~R$ 138,00/saca</p>
+                            <p> <span class="font-medium">Interior (Ex: Cruz Alta):</span> ~R$ 128,50/saca</p>
+                         </div>
+                     </div>
+                     <div class="border border-gray-200 rounded-lg p-4 bg-gray-50">
+                         <h3 class="text-lg font-semibold mb-2">Paraná (PR)</h3>
+                         <p class="text-sm mb-3">Plantio tecnicamente <span class="font-semibold">encerrado (95%+)</span>. O DERAL-PR reporta que o foco agora é 100% no monitoramento das lavouras estabelecidas, que apresentam excelente desenvolvimento inicial e se beneficiam das chuvas regulares.</p>
+                        <div class="space-y-1 text-sm">
+                            <p><strong>Preços Soja (14/11/25):</strong></p>
+                            <p><span class="font-medium">Porto (Paranaguá):</span> ~R$ 139,00/saca</p>
+                            <p><span class="font-medium">Interior (Ex: Maringá):</span> ~R$ 129,50/saca</p>
+                        </div>
+                    </div>
+                </div>
+             </section>
+
+        </div>
+    </main>
+
+    <footer class="text-center text-xs text-gray-500 py-4 mt-8">
+        Infográfico gerado em 16 de novembro de 2025. Dados sintetizados a partir de fontes públicas e análises de mercado (CFR) referentes à semana de 14 de novembro de 2025. Verifique fontes oficiais para decisões comerciais.
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+             const processLabels = (labels) => {
+                const charLimit = 16;
+                return labels.map(label => {
+                    if (typeof label === 'string' && label.length > charLimit) {
+                        const words = label.split(' ');
+                        const lines = [];
+                        let currentLine = '';
+                        words.forEach(word => {
+                            if ((currentLine + word).length <= charLimit) {
+                                currentLine += (currentLine? ' ' : '') + word;
+                            } else {
+                                if (currentLine) lines.push(currentLine);
+                                currentLine = word;
+                             }
+                        });
+                        if (currentLine) lines.push(currentLine);
+                         return lines;
+                    }
+                    return label;
+                });
+            };
+
+            const tooltipTitleCallback = (tooltipItems) => {
+                 const item = tooltipItems[0];
+                 let label = item.chart.data.labels[item.dataIndex];
+                 if (Array.isArray(label)) {
+                    return label.join(' ');
+                 } else {
+                    return label;
+                }
+            };
+
+            const commonChartOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    },
+                    legend: {
+                         position: 'bottom',
+                    }
+                },
+                scales: {
+                     x: {
+                        ticks: {
+                            autoSkip: false,
+                            maxRotation: 0,
+                            minRotation: 0
+                        }
+                    }
+                }
+            };
+
+            const colors = ['#47A8F5', '#F7C548', '#F78154', '#F24C4E', '#3E4A61', '#A8D8B9'];
+
+
+            const ctxFert = document.getElementById('fertilizerPriceChart')?.getContext('2d');
+            if (ctxFert) {
+                 const labelsFert = processLabels(['Uréia Granulada', 'MAP', 'KCL']);
+                 new Chart(ctxFert, {
+                    type: 'bar',
+                    data: {
+                        labels: labelsFert,
+                        datasets: [{
+                            label: 'Preço Médio CFR Brasil (USD/t)',
+                             data: [420.00, 715.00, 365.00],
+                             backgroundColor: [colors[0], colors[1], colors[2]],
+                             borderColor: [colors[0], colors[1], colors[2]],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                       ...commonChartOptions,
+                         indexAxis: 'y',
+                        scales: {
+                             x: {
+                                beginAtZero: true,
+                                title: { display: true, text: 'USD/Tonelada' }
+                            },
+                            y: {
+                                ticks: { font: { size: 10 } }
+                            }
+                        },
+                         plugins: {
+                            ...commonChartOptions.plugins,
+                            legend: { display: false }
+                        }
+                    }
+                });
+            }
+
+
+            const ctxDef = document.getElementById('defensivosUsageChart')?.getContext('2d');
+            if (ctxDef) {
+                const labelsDef = processLabels(['Herbicidas', 'Inseticidas', 'Fungicidas', 'Outros/Adjuvantes']);
+                new Chart(ctxDef, {
+                    type: 'doughnut',
+                    data: {
+                        labels: labelsDef,
+                        datasets: [{
+                            label: 'Distribuição de Uso (Ref. S1 2025)',
+                            data: [40, 29, 21, 10],
+                            backgroundColor: [colors[0], colors[2], colors[1], colors[4]],
+                            borderColor: '#fff',
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                       ...commonChartOptions,
+                        scales: {
+                            x: { display: false },
+                            y: { display: false }
+                        },
+                        plugins: {
+                           ...commonChartOptions.plugins,
+                            legend: {
+                                position: 'right',
+                                labels: {
+                                    boxWidth: 20
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+        });
+    </script>
+
+</body>
+</html>
