@@ -3,16 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
     <title>Resumo Agro - A Sátira Semanal (24-30 Nov 2025)</title>
-=======
     <title>Resumo Semanal do Agronegócio - 14/11/2025</title>
->>>>>>> 58d559b8d4597530673792441232a7d4d2ea4151
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<<<<<<< HEAD
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -27,14 +23,12 @@
         }
         /* Chart Container Styling - Responsive & Controlled */
         .chart-container {
-=======
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
         }
        .chart-container {
->>>>>>> 58d559b8d4597530673792441232a7d4d2ea4151
             position: relative;
             width: 100%;
             max-width: 600px;
@@ -44,7 +38,6 @@
             max-height: 400px;
         }
         @media (min-width: 768px) {
-<<<<<<< HEAD
             .chart-container {
                 height: 350px;
             }
@@ -272,7 +265,6 @@
         <p>Relatório gerado em 30/11/2025.</p>
         <p class="mt-2">"O agro não para (nem para almoçar)."</p>
         <p class="mt-1">Fontes: Agrinvest, Deral, Safras & Mercado, Cepea, Scot Consultoria.</p>
-=======
            .chart-container {
                 height: 350px;
             }
@@ -409,20 +401,17 @@
 
     <footer class="text-center text-xs text-gray-500 py-4 mt-8">
         Infográfico gerado em 16 de novembro de 2025. Dados sintetizados a partir de fontes públicas e análises de mercado (CFR) referentes à semana de 14 de novembro de 2025. Verifique fontes oficiais para decisões comerciais.
->>>>>>> 58d559b8d4597530673792441232a7d4d2ea4151
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 
-<<<<<<< HEAD
             // Helper to wrap long labels
             const processLabels = (labels) => {
                 const charLimit = 15;
                 return labels.map(label => {
                     if (typeof label === 'string' && label.length > charLimit) {
                         return label.split(' '); // Simple split for this context
-=======
              const processLabels = (labels) => {
                 const charLimit = 16;
                 return labels.map(label => {
@@ -440,13 +429,11 @@
                         });
                         if (currentLine) lines.push(currentLine);
                          return lines;
->>>>>>> 58d559b8d4597530673792441232a7d4d2ea4151
                     }
                     return label;
                 });
             };
 
-<<<<<<< HEAD
             const commonOptions = {
                 responsive: true,
                 maintainAspectRatio: false,
@@ -456,7 +443,6 @@
                         backgroundColor: '#1E293B',
                         titleFont: { family: 'Poppins' },
                         bodyFont: { family: 'Roboto Mono' }
-=======
             const tooltipTitleCallback = (tooltipItems) => {
                  const item = tooltipItems[0];
                  let label = item.chart.data.labels[item.dataIndex];
@@ -487,12 +473,10 @@
                             maxRotation: 0,
                             minRotation: 0
                         }
->>>>>>> 58d559b8d4597530673792441232a7d4d2ea4151
                     }
                 }
             };
 
-<<<<<<< HEAD
             // 1. Gráfico Safrinha Inputs (O Atraso do Paraná)
             const ctxSafrinha = document.getElementById('safrinhaInputChart')?.getContext('2d');
             if (ctxSafrinha) {
@@ -558,7 +542,6 @@
                             }
                         },
                         plugins: {
-=======
             const colors = ['#47A8F5', '#F7C548', '#F78154', '#F24C4E', '#3E4A61', '#A8D8B9'];
 
 
@@ -591,14 +574,12 @@
                         },
                          plugins: {
                             ...commonChartOptions.plugins,
->>>>>>> 58d559b8d4597530673792441232a7d4d2ea4151
                             legend: { display: false }
                         }
                     }
                 });
             }
 
-<<<<<<< HEAD
             // 3. Gráfico Defensivos (A Farmacinha)
             const ctxDef = document.getElementById('defensivosUsageChart')?.getContext('2d');
             if (ctxDef) {
@@ -617,7 +598,6 @@
                         cutout: '60%',
                         plugins: {
                             legend: { position: 'right' }
-=======
 
             const ctxDef = document.getElementById('defensivosUsageChart')?.getContext('2d');
             if (ctxDef) {
@@ -648,7 +628,6 @@
                                     boxWidth: 20
                                 }
                             }
->>>>>>> 58d559b8d4597530673792441232a7d4d2ea4151
                         }
                     }
                 });
@@ -656,9 +635,6 @@
 
         });
     </script>
-<<<<<<< HEAD
-=======
 
->>>>>>> 58d559b8d4597530673792441232a7d4d2ea4151
 </body>
 </html>
