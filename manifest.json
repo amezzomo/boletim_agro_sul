@@ -1,12 +1,5 @@
 {
-  "versao": "restored-package-1.0",
-  "data_geracao": "2025-11-10T00:21:19.088115",
-  "arquivos": [
-    "index.html",
-    "boletim_45_2025.html",
-    "unsubscribe.html",
-    "podcast/Agronegócio 2025_ Crise de Crédito, Custo Alto e o Paradoxo da Safra Recorde.mp3"
-  ],
-  "kpi_panel": true,
-  "kpi_generated_at": "2025-11-10T00:34:32.204485"
+  "versao": "week46_final_local",
+  "data": "2025-11-16T22:43:38.862025",
+  "index_backup": "index_backup_20251116224338.html"
 }
