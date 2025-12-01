@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumo Agro - A Sátira Semanal (24-30 Nov 2025)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #F3F4F6;
+        }
+        h1, h2, h3 {
+            font-weight: 800;
+        }
+        .font-mono {
+            font-family: 'Roboto Mono', monospace;
+        }
+        /* Chart Container Styling - Responsive & Controlled */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        /* Custom Cards for "Meme" feel without Images */
+        .meme-card {
+            border-left: 6px solid;
+            transition: transform 0.2s;
+        }
+        .meme-card:hover {
+            transform: translateY(-2px);
+        }
+        .trend-up { color: #10B981; }
+        .trend-down { color: #EF4444; }
+        .trend-stable { color: #F59E0B; }
+        
+        /* Satirical Badge */
+        .satire-badge {
+            background-color: #FFDE03;
+            color: #000;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            border: 1px solid #000;
+            box-shadow: 2px 2px 0px #000;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-[#1E293B] text-white p-6 shadow-xl border-b-4 border-[#FFDE03]">
+        <div class="container mx-auto text-center">
+            <div class="inline-block bg-[#FFDE03] text-black px-4 py-1 mb-2 transform -rotate-2 font-black border-2 border-black shadow-[4px_4px_0px_0px_rgba(255,255,255,1)]">
+                EDIÇÃO: "SEGURA O CHEQUE, PARANÁ!"
+            </div>
+            <h1 class="text-3xl md:text-5xl uppercase tracking-tighter mt-2">Resumo Semanal do Agro</h1>
+            <p class="text-gray-400 mt-2 font-mono text-sm">Semana de 24 a 30 de Novembro de 2025</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8 space-y-12">
+
+        <!-- Manchete -->
+        <section id="manchete" class="bg-white rounded-xl shadow-lg overflow-hidden border-2 border-black">
+            <div class="bg-[#3B82F6] p-4 text-white flex justify-between items-center">
+                <h2 class="text-xl md:text-2xl uppercase">📰 Manchete: O Agro é Pop (na COP)</h2>
+                <span class="text-3xl">🌍</span>
+            </div>
+            <div class="p-6 md:p-8">
+                <p class="text-lg leading-relaxed mb-4">
+                    Enquanto os "gringos" na COP 30 em Belém aplaudiam nossos biocombustíveis e fingiam que vão salvar o mundo, o produtor brasileiro estava fazendo a verdadeira mágica: <strong>terminar de plantar a maior safra de soja da história</strong> enquanto desviava de raios e trovões.
+                </p>
+                <div class="bg-blue-50 p-6 rounded-xl border-2 border-blue-200 text-center">
+                    <p class="text-sm font-bold text-blue-800 uppercase tracking-widest mb-1">Status do "Milagre" (Plantio Soja BR)</p>
+                    <p class="text-6xl font-black text-[#3B82F6] tracking-tighter">~85%</p>
+                    <p class="text-gray-600 font-mono text-xs mt-2">Tá quase acabando, guerreiro. Aguenta firme.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Análise Ácida -->
+        <section id="analise" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="meme-card bg-white p-6 rounded-xl shadow-md border-l-[#8B5CF6]">
+                <div class="flex justify-between mb-4">
+                    <h3 class="text-xl font-bold text-[#8B5CF6]">👨‍🏫 O "Guru" dos Custos</h3>
+                    <span class="satire-badge">Jeferson Souza</span>
+                </div>
+                <p class="text-sm text-gray-600 mb-2">
+                    <span class="font-bold">A Realidade:</span> O produtor do Paraná olhou para o preço do adubo, olhou para o preço do milho futuro, riu de nervoso e <strong>fechou a carteira</strong>.
+                </p>
+                <p class="text-sm">
+                    A estratégia para a safrinha é clara: "Barter ou nada". Ninguém quer pagar a conta do adubo caro com milho barato. A compra está atrasada de propósito. É o famoso "quem piscar primeiro, perde".
+                </p>
+            </div>
+
+            <div class="meme-card bg-white p-6 rounded-xl shadow-md border-l-[#EC4899]">
+                <div class="flex justify-between mb-4">
+                    <h3 class="text-xl font-bold text-[#EC4899]">👩‍🌾 A "Vidente" do Clima</h3>
+                    <span class="satire-badge">Kellen Severo</span>
+                </div>
+                <p class="text-sm text-gray-600 mb-2">
+                    <span class="font-bold">O Resumo:</span> O Rio Grande do Sul finalmente saiu do "castigo" climático. As chuvas vieram, a soja nasceu bonita e o gaúcho voltou a sorrir (timidamente).
+                </p>
+                <p class="text-sm">
+                    Enquanto isso, o mercado internacional olha para a nossa safra gigante e tenta derrubar o preço, mas a China continua comprando como se não houvesse amanhã. É o cabo de guerra de sempre.
+                </p>
+            </div>
+        </section>
+
+        <!-- A Realidade Séria (Tragédia/Clima) -->
+        <section id="clima-serio" class="bg-red-50 rounded-xl border-l-8 border-red-600 p-6 shadow-sm">
+            <div class="flex items-start">
+                <div class="text-4xl mr-4">⚠️</div>
+                <div>
+                    <h2 class="text-xl font-bold text-red-800 mb-2">Sem brincadeira aqui: Alerta Climático</h2>
+                    <p class="text-gray-800 text-sm leading-relaxed">
+                        Apesar da festa no Sul e Centro-Oeste, a situação no <strong>MATOPIBA e Norte de MT</strong> exige seriedade. Bolsões de seca persistem e o replantio já é realidade em algumas áreas. Se a chuva não regularizar em dezembro, o potencial recorde começa a ser cortado. O mercado já precifica esse risco.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gráfico: O "Atraso" do Paraná -->
+        <section id="safrinha-pr" class="bg-white rounded-xl shadow-lg p-6 border-2 border-gray-100">
+            <h2 class="text-2xl font-bold mb-2 text-[#F59E0B] flex items-center">
+                <span class="text-3xl mr-2">🌽</span> Foco Safrinha: O "Freio de Mão" Paranaense
+            </h2>
+            <p class="mb-6 text-gray-600 text-sm">
+                Comparação entre o ritmo normal de compras de insumos e a "operação tartaruga" atual. O produtor está esperando o milagre da baixa de preços.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="md:col-span-2">
+                    <div class="chart-container">
+                        <canvas id="safrinhaInputChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-yellow-50 p-4 rounded-lg flex flex-col justify-center border border-yellow-200">
+                    <h4 class="font-bold text-yellow-800 mb-2">O que isso significa?</h4>
+                    <p class="text-xs text-yellow-900 mb-2">
+                        O produtor não está sem dinheiro, ele está <strong>sem vontade</strong> de perder margem.
+                    </p>
+                    <p class="text-xs text-yellow-900">
+                        Se a indústria de fertilizantes não ceder, vai ter fila de caminhão entregando adubo em cima da hora do plantio (janeiro/fevereiro). O caos logístico é logo ali.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- A Vingança do Boi (Pecuária) -->
+        <section id="pecuaria" class="bg-white rounded-xl shadow-lg overflow-hidden border-b-4 border-green-600">
+            <div class="bg-green-600 p-4 text-white flex justify-between items-center">
+                <h2 class="text-xl font-bold uppercase">🐮 A Vingança do Boi</h2>
+                <span class="font-mono text-sm bg-green-800 px-2 py-1 rounded">CICLO DE ALTA</span>
+            </div>
+            <div class="p-6">
+                <p class="mb-6 text-gray-600 text-sm">
+                    Lembra quando diziam que criar gado dava prejuízo? Pois é, o jogo virou. Faltou boi no pasto, a China quer carne e a arroba disparou. O churrasco de fim de ano vai ser "gourmet" (leia-se: caro).
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <!-- Card 1 -->
+                    <div class="bg-green-50 border-2 border-green-100 p-4 rounded-xl text-center transform hover:scale-105 transition-transform">
+                        <div class="text-2xl mb-1">🥩</div>
+                        <p class="text-xs font-bold text-gray-500 uppercase">Boi Gordo (SP)</p>
+                        <p class="text-2xl font-black text-green-700">R$ 322,00</p>
+                        <p class="text-[10px] text-green-600 font-bold bg-green-200 inline-block px-2 rounded-full mt-1">Firme igual rocha</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-green-50 border-2 border-green-100 p-4 rounded-xl text-center transform hover:scale-105 transition-transform">
+                        <div class="text-2xl mb-1">🍼</div>
+                        <p class="text-xs font-bold text-gray-500 uppercase">Bezerro (MS)</p>
+                        <p class="text-2xl font-black text-green-700">R$ 3.100+</p>
+                        <p class="text-[10px] text-green-600 font-bold bg-green-200 inline-block px-2 rounded-full mt-1">Recorde!</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-green-50 border-2 border-green-100 p-4 rounded-xl text-center transform hover:scale-105 transition-transform">
+                        <div class="text-2xl mb-1">🚢</div>
+                        <p class="text-xs font-bold text-gray-500 uppercase">Exportação</p>
+                        <p class="text-2xl font-black text-green-700">Explodindo</p>
+                        <p class="text-[10px] text-green-600 font-bold bg-green-200 inline-block px-2 rounded-full mt-1">China com fome</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Termômetro de Preços (NPK) -->
+        <section id="precos" class="bg-gray-800 text-white rounded-xl shadow-lg p-6 relative overflow-hidden">
+            <div class="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-[#FFDE03] rounded-full opacity-20"></div>
+            
+            <h2 class="text-xl font-bold mb-6 flex items-center z-10 relative">
+                <span class="mr-2">💸</span> O "Precinho" dos Insumos (CFR Brasil)
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
+                <div>
+                    <p class="text-sm text-gray-400 mb-4">
+                        Os preços deram uma acalmada, mas ainda estão longe da "promoção" que o produtor sonha. A Uréia caiu um pouquinho (ninguém tá comprando mesmo).
+                    </p>
+                    <ul class="space-y-3 text-sm font-mono">
+                        <li class="flex justify-between items-center border-b border-gray-700 pb-2">
+                            <span>Uréia (Nitrogênio)</span>
+                            <span class="text-[#EF4444] font-bold">~$420/t (Caiu 👇)</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-gray-700 pb-2">
+                            <span>MAP (Fósforo)</span>
+                            <span class="text-[#F59E0B] font-bold">~$715/t (Travado 😐)</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-gray-700 pb-2">
+                            <span>KCL (Potássio)</span>
+                            <span class="text-[#F59E0B] font-bold">~$365/t (Estável 😐)</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="chart-container" style="height: 200px;">
+                    <canvas id="fertilizerPriceChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- Defensivos -->
+        <section id="defensivos" class="bg-white rounded-xl shadow-lg p-6 border-t-4 border-purple-500">
+            <h2 class="text-xl font-bold mb-4 text-purple-700">🔬 A Farmacinha da Lavoura</h2>
+            <div class="flex flex-col md:flex-row items-center gap-6">
+                <div class="w-full md:w-1/2">
+                    <p class="text-sm text-gray-600 mb-4">
+                        Com tanta chuva e calor, a <strong>Ferrugem Asiática</strong> está doida para entrar na festa sem convite. O gasto agora é preventivo. Melhor gastar com fungicida agora do que chorar na colheita.
+                    </p>
+                    <div class="bg-purple-50 p-3 rounded border border-purple-100">
+                        <p class="text-xs font-bold text-purple-800">Tendência:</p>
+                        <p class="text-xs text-gray-700">Foco total em Fungicidas e "limpeza" final de plantas daninhas.</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 chart-container" style="height: 220px;">
+                    <canvas id="defensivosUsageChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-[#1E293B] text-gray-400 py-8 text-center text-xs font-mono">
+        <p>Relatório gerado em 30/11/2025.</p>
+        <p class="mt-2">"O agro não para (nem para almoçar)."</p>
+        <p class="mt-1">Fontes: Agrinvest, Deral, Safras & Mercado, Cepea, Scot Consultoria.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Helper to wrap long labels
+            const processLabels = (labels) => {
+                const charLimit = 15;
+                return labels.map(label => {
+                    if (typeof label === 'string' && label.length > charLimit) {
+                        return label.split(' '); // Simple split for this context
+                    }
+                    return label;
+                });
+            };
+
+            const commonOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { labels: { font: { family: 'Poppins', size: 12 } } },
+                    tooltip: {
+                        backgroundColor: '#1E293B',
+                        titleFont: { family: 'Poppins' },
+                        bodyFont: { family: 'Roboto Mono' }
+                    }
+                }
+            };
+
+            // 1. Gráfico Safrinha Inputs (O Atraso do Paraná)
+            const ctxSafrinha = document.getElementById('safrinhaInputChart')?.getContext('2d');
+            if (ctxSafrinha) {
+                new Chart(ctxSafrinha, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Média Histórica', 'Safrinha 2026 (Atual)'],
+                        datasets: [{
+                            label: '% Comprado (Insumos PR)',
+                            data: [68, 48], // Dados estimados da pesquisa
+                            backgroundColor: ['#E5E7EB', '#EF4444'], // Cinza para média, Vermelho para o atraso
+                            borderWidth: 2,
+                            borderColor: ['#9CA3AF', '#B91C1C'],
+                            borderRadius: 8
+                        }]
+                    },
+                    options: {
+                        ...commonOptions,
+                        indexAxis: 'y',
+                        scales: {
+                            x: { 
+                                beginAtZero: true, 
+                                max: 100,
+                                grid: { display: false }
+                            },
+                            y: { grid: { display: false } }
+                        },
+                        plugins: {
+                            ...commonOptions.plugins,
+                            legend: { display: false },
+                            title: { display: true, text: 'Ritmo de Compras no PR (Atrasado!)' }
+                        }
+                    }
+                });
+            }
+
+            // 2. Gráfico Preços Fertilizantes (O Bolso Dói)
+            const ctxFert = document.getElementById('fertilizerPriceChart')?.getContext('2d');
+            if (ctxFert) {
+                new Chart(ctxFert, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Uréia', 'KCL (Potássio)', 'MAP'],
+                        datasets: [{
+                            label: 'Preço (USD/ton)',
+                            data: [420, 365, 715],
+                            backgroundColor: ['#60A5FA', '#FBBF24', '#34D399'],
+                            borderColor: '#1E293B',
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        ...commonOptions,
+                        scales: {
+                            y: { 
+                                beginAtZero: true,
+                                grid: { color: '#374151' },
+                                ticks: { color: '#9CA3AF' }
+                            },
+                            x: {
+                                grid: { display: false },
+                                ticks: { color: '#F3F4F6' }
+                            }
+                        },
+                        plugins: {
+                            legend: { display: false }
+                        }
+                    }
+                });
+            }
+
+            // 3. Gráfico Defensivos (A Farmacinha)
+            const ctxDef = document.getElementById('defensivosUsageChart')?.getContext('2d');
+            if (ctxDef) {
+                new Chart(ctxDef, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Fungicidas (O Vilão)', 'Herbicidas', 'Inseticidas', 'Outros'],
+                        datasets: [{
+                            data: [45, 30, 20, 5], // Estimativa de foco atual
+                            backgroundColor: ['#8B5CF6', '#10B981', '#EF4444', '#9CA3AF'],
+                            borderWidth: 0
+                        }]
+                    },
+                    options: {
+                        ...commonOptions,
+                        cutout: '60%',
+                        plugins: {
+                            legend: { position: 'right' }
+                        }
+                    }
+                });
+            }
+
+        });
+    </script>
+</body>
+</html>
